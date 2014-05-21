@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginRight="@dimen/actionbar_imgbtn_width_x1"
+            android:text="@string/more_weibodoctor" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <Button
+            android:id="@+id/more_weibo_btnTitle_change"
+            style="@style/actionBarTextButton"
+            android:layout_width="@dimen/actionbar_textbtn_width_x2word"
+            android:text="切换"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <include layout="@layout/async_error" />
+
+    <ListView
+        android:id="@+id/more_weibo_listview"
+		style="@style/drugList" >
+    </ListView>
+
+</LinearLayout>

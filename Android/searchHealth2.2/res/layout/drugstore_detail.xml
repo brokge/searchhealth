@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/setting_bgcolor"
+    android:orientation="vertical"  >
+
+    <LinearLayout style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:text="@string/drugstore_detail" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <ImageButton
+            android:id="@id/actionbar_tomap_btn"
+            style="@style/actionBarImgButton"
+            android:src="@drawable/actionbar_btn_map" />
+    </LinearLayout>
+
+    <include layout="@layout/async_begin" />
+
+    <include layout="@layout/async_error" />
+
+    <LinearLayout
+        android:id="@+id/drugstore_Linear_info"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="@null"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:background="@null"
+            android:fadingEdge="vertical"
+            android:scrollbars="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:orientation="vertical" >
+
+                <LinearLayout style="@style/drugstoreDetailInfoRange" 
+                            android:background="@android:color/white" >
+
+                    <TextView
+                        android:id="@+id/s_detail_txtname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="药店详情药店详情药店详情"
+                        android:textColor="@color/drugstore_list_name_textcolor"
+                        android:textSize="@dimen/drugstore_detail_name_textsize"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="地址："
+                            android:textColor="@color/drugstore_list_address_textcolor"
+                            android:textSize="@dimen/drugstore_detail_address_textsize" />
+
+                        <TextView
+                            android:id="@+id/s_detail_txtaddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="药店详情药店详情药店详情药店详情药店详情药店详情药店详情药店详情药店详情药店详情"
+                            android:textColor="@color/drugstore_list_address_textcolor"
+                            android:textSize="@dimen/drugstore_detail_address_textsize" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/s_detail_txtdistance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="距离180米"
+                        android:textColor="@color/drugstore_list_address_textcolor"
+                        android:textSize="@dimen/drugstore_detail_address_textsize" />
+                </LinearLayout>
+
+                <ImageView style="@style/searchBarSpliterDown" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical" >
+                    
+                    <LinearLayout
+                        android:id="@+id/drugstore_detail_loader_promotion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:orientation="horizontal" >
+
+                        <ProgressBar
+                            android:id="@+id/p_probar"
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/p_protxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="正在加载店内活动..."/>
+                    </LinearLayout>
+                    
+                    <LinearLayout
+                        android:id="@+id/drugstore_detail_llt_promotion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            style="@style/commonItemRange"
+                            android:background="@drawable/common_card_top_bg"
+                            android:orientation="horizontal"
+                            android:padding="0dp" >
+
+                            <TextView
+                                style="@style/settingItemHeadText"
+                                android:text="店内活动" />
+                        </LinearLayout>
+
+                        <View style="@style/commonHorizontalSeparator" />
+
+                        <LinearLayout
+                            style="@style/commonItemRange"
+                            android:background="@drawable/common_card_bottom_bg"
+                            android:clickable="false"
+                            android:orientation="vertical"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="3dp"
+                            android:paddingRight="3dp"
+                            android:paddingTop="0dp" >
+
+                            <coolbuy360.control.ADGallery
+                                android:id="@+id/dst_detail_gallery_promotion"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:fadingEdge="none"
+                                android:unselectedAlpha="1" >
+                            </coolbuy360.control.ADGallery>
+
+                            <LinearLayout
+                                android:id="@+id/dst_detail_promotion_point"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#cccccccc"
+                                android:gravity="center"
+                                android:orientation="horizontal" >
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    
+                    <LinearLayout
+                        style="@style/commonItemRange"
+                        android:background="@drawable/common_card_top_bg"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/settingItemHeadText"
+                            android:text="营业时间：" />
+
+                        <TextView
+                            android:id="@+id/s_detail_txttime"
+                            style="@style/settingItemRightContentTextHighlight"
+                            android:gravity="left"
+                            android:text="8:00~24:00" />
+                    </LinearLayout>
+
+                    <View style="@style/commonHorizontalSeparator"/>
+
+                    <LinearLayout
+                        android:id="@+id/s_detail_tabrowcall"
+                        style="@style/commonItemRange"
+                        android:background="@drawable/common_card_middle_bg"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/settingItemHeadText"
+                            android:text="电        话：" />
+
+                        <TextView
+                            android:id="@+id/s_detail_txtcall"
+                            style="@style/settingItemRightContentTextHighlight"
+                            android:gravity="left"
+                            android:paddingRight="0dp"
+                            android:text="0212-2578123" />
+
+                        <ImageButton
+                            android:id="@+id/s_detail_btncall"
+                            style="@style/drugstoreListItemBottomButtonIco_phonecall"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="5dp"
+                            android:background="@null"
+                            android:padding="@null"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="2dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/s_detail_tabrowphone"
+                        style="@style/commonItemRange"
+                        android:background="@drawable/common_card_middle_bg"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/settingItemHeadText"
+                            android:text="手        机：" />
+
+                        <TextView
+                            android:id="@+id/s_detail_txtphone"
+                            style="@style/settingItemRightContentTextHighlight"
+                            android:gravity="left"
+                            android:text="18778430853" />
+
+                        <ImageButton
+                            android:id="@+id/s_detail_btnphone"
+                            style="@style/drugstoreListItemBottomButtonIco_phonecall"
+                            android:layout_gravity="right"
+                            android:layout_marginRight="5dp"
+                            android:background="@null"
+                            android:padding="@null"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="2dp" />
+
+                    </LinearLayout>
+
+                    <View style="@style/commonHorizontalSeparator"/>
+
+                    <LinearLayout
+                        style="@style/commonItemRange"
+                        android:background="@drawable/common_card_middle_bg"
+                        android:orientation="horizontal"
+                        android:gravity="top" >
+
+                        <TextView
+                            style="@style/settingItemHeadText"
+                            android:text="服        务：" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:layout_margin="10dp"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:id="@+id/s_detail_tabrowbao"
+                                style="@style/drugstoreDetailNormalTableRow"
+                                android:padding="2dp" >
+
+                                <ImageView
+                                    android:id="@+id/s_detail_imgbao"
+                                    style="@style/drugstorePropertyIcon_yibao" />
+
+                                <TextView
+                                    android:id="@+id/s_detail_txtbao"
+                                    style="@style/settingItemRightContentTextHighlight"
+                                    android:layout_margin="@null"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="left"
+                                    android:text="医保指定药店" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/s_detail_tabrowding"
+                                style="@style/drugstoreDetailNormalTableRow"
+                                android:padding="2dp" >
+
+                                <ImageView
+                                    android:id="@+id/s_detail_imgding"
+                                    style="@style/drugstorePropertyIcon_din" />
+
+                                <TextView
+                                    android:id="@+id/s_detail_txtding"
+                                    style="@style/settingItemRightContentTextHighlight"
+                                    android:layout_margin="@null"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="left"
+                                    android:text="可电话订购" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/s_detail_tabrowsong"
+                                style="@style/drugstoreDetailNormalTableRow"
+                                android:padding="2dp" >
+
+                                <ImageView
+                                    android:id="@+id/s_detail_imgsong"
+                                    style="@style/drugstorePropertyIcon_song" />
+
+                                <TextView
+                                    android:id="@+id/s_detail_txtsong"
+                                    style="@style/settingItemRightContentTextHighlight"
+                                    android:layout_margin="@null"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="left"
+                                    android:text="可送货上门-3公里以内" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/s_detail_tabrowdao"
+                                style="@style/drugstoreDetailNormalTableRow"
+                                android:padding="2dp" >
+
+                                <ImageView
+                                    android:id="@+id/s_detail_imgdao"
+                                    style="@style/drugstorePropertyIcon_dao" />
+
+                                <TextView
+                                    android:id="@+id/s_detail_txtdao"
+                                    style="@style/settingItemRightContentTextHighlight"
+                                    android:layout_margin="@null"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="left"
+                                    android:text="可货到付款" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/s_detail_tabrowv"
+                                style="@style/drugstoreDetailNormalTableRow"
+                                android:padding="2dp" >
+
+                                <ImageView
+                                    android:id="@+id/s_detail_imgv"
+                                    style="@style/drugstorePropertyIcon_v" />
+
+                                <TextView
+                                    android:id="@+id/s_detail_txtv"
+                                    style="@style/settingItemRightContentTextHighlight"
+                                    android:layout_margin="@null"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="left"
+                                    android:text="会员服务" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/s_detail_tabrow24"
+                                style="@style/drugstoreDetailNormalTableRow"
+                                android:padding="2dp" >
+
+                                <ImageView
+                                    android:id="@+id/s_detail_img24"
+                                    style="@style/drugstorePropertyIcon_hours" />
+
+                                <TextView
+                                    android:id="@+id/s_detail_txt24"
+                                    style="@style/settingItemRightContentTextHighlight"
+                                    android:layout_margin="@null"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="left"
+                                    android:text="24小时服务" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View style="@style/commonHorizontalSeparator"/>
+
+                    <LinearLayout 
+                        style="@style/commonItemRange"
+                        android:background="@drawable/common_card_middle_bg"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/settingItemHeadText"
+                            android:text="其他服务：" />
+
+                        <TextView
+                            android:id="@+id/s_detail_txtotherservice"
+                            style="@style/settingItemRightContentTextHighlight"
+                            android:gravity="left"
+                            android:text="健康管理,免费体检" />
+
+                    </LinearLayout>
+
+                    <View style="@style/commonHorizontalSeparator"/>
+
+                    <LinearLayout 
+                        style="@style/commonItemRange"
+                        android:background="@drawable/common_card_bottom_bg"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/settingItemHeadText"
+                            android:text="药店简介：" />
+
+                        <TextView
+                            android:id="@+id/s_detail_txtintroduct"
+                            style="@style/settingItemRightContentTextHighlight"
+                            android:gravity="left"
+                            android:text="中国海王星辰连锁药店股份有限公司(NYSE：NPD)是在1995年创立的，当时是以深圳市海王星辰医药有限公司，主要销售安全药品的健康连锁药房。业务遍满深圳、广州、昆明、成都、上海、杭州、苏州、宁波、大连、潍坊、天津、青岛等众多城市2709 家直营门店国海王星辰连锁药店股份有限公司(NYSE：NPD)是在1995年创立的，当时是以深圳市海王星辰医药有限公司，主要销售安全药品的健康连锁药房。业务遍满深圳、广州、昆明、成都、上海、杭州、苏州、宁波、大连、潍坊、天津、青岛等众多城市2709 家直营门店。" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <include layout="@layout/tools_collect_btn"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:porterduff="http://schemas.android.com/apk/res/coolbuy360.searchhealth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"     
+     >
+  <coolbuy360.control.PorterDuffView
+				android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:id="@+id/myprogress"
+		        android:src="@drawable/down_img"
+		        android:layout_gravity="center"	
+		        porterduff:porterduffMode="true" />
+ <coolbuy360.control.MyGallery 
+     android:layout_height="fill_parent"      
+ 		android:layout_width="fill_parent" 		
+ 		 android:id="@+id/mygallery" 
+ 		 android:visibility="gone"		
+ 		 /> 
+</LinearLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginRight="@dimen/actionbar_imgbtn_width_x1"
+            android:text="@string/drug_descri" />
+
+        <ImageView
+            style="@style/actionBarSpliter"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/p_descriTitle_btn_D"
+            style="@style/actionBarImgButton"
+            android:src="@drawable/btn_action_more_img"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <include layout="@layout/async_error" />
+    
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="@null" >
+
+        <LinearLayout
+            android:id="@+id/drugstore_Linear_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:background="@null"
+                android:fadingEdge="vertical"
+                android:scrollbars="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@null"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/p_descri_relativelayouy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/drug_list_bg"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:orientation="horizontal"
+                        android:padding="10dp" >
+
+                        <ImageView
+                            android:id="@+id/p_descri_img"
+                            style="@style/drugPhotoImageView"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            style="@style/drugListItemInfoRange"
+                            android:layout_margin="0dp" >
+
+                            <TextView
+                                android:id="@+id/p_descri_title"
+                                style="@style/drugListItemNameText"
+                                android:text="@string/drug_product" />
+
+                            <TextView
+                                android:id="@+id/p_descri_store"
+                                style="@style/drugListItemEnterpriseText"
+                                android:text="公司名称" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal" >
+
+                                <ImageView
+                                    android:id="@+id/p_descri_otc"
+                                    style="@style/drugPropertyIcon"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/p_descri_txt_otc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="10dp"
+                                    android:textColor="@color/drug_list_enterprise_textcolor"
+                                    android:textSize="@dimen/druglist_ico_common_textsize"
+                                    android:visibility="gone" />
+
+                                <ImageView
+                                    android:id="@+id/p_descri_bao"
+                                    style="@style/drugPropertyIcon"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/p_descri_txt_bao"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:textColor="@color/drug_list_enterprise_textcolor"
+                                    android:textSize="@dimen/druglist_ico_common_textsize"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="horizontal" >
+
+                                <ImageView
+                                    android:id="@+id/p_descri_h"
+                                    style="@style/drugPropertyIcon"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/p_descri_txt_h"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:textColor="@color/drug_list_enterprise_textcolor"
+                                    android:textSize="@dimen/druglist_ico_common_textsize"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView style="@style/searchBarSpliterDown" />
+
+                    <TextView
+                        android:id="@+id/p_decri_txt_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@null"
+                        android:scrollbars="vertical"
+                        android:text="TextView"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </ScrollView>
+            
+            <include layout="@layout/tools_collect_btn" />
+        </LinearLayout>
+
+        <include layout="@layout/async_begin" />
+    </FrameLayout>
+
+</LinearLayout>

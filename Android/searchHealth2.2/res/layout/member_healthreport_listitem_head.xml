@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/setting_bgcolor"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/shadow_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/member_healthreport_listitem_head_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_margin="5dp"
+            android:gravity="left"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="姓名：杨联亮"
+            android:textColor="@color/setting_item_textcolor"
+            android:textSize="@dimen/setting_item_textsize" />
+
+        <TextView
+            android:id="@+id/member_healthreport_listitem_head_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_margin="5dp"
+            android:gravity="left"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="性别：男"
+            android:textColor="@color/setting_item_textcolor"
+            android:textSize="@dimen/setting_item_textsize" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/shadow_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            android:background="#FFDDDDDD">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_margin="5dp"
+                android:gravity="left"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="健康事件"
+                android:textColor="@color/setting_item_textcolor"
+                android:textSize="@dimen/setting_item_textsize"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+    
+</LinearLayout>

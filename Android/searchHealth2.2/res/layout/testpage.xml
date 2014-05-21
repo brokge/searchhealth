@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/test_txt_1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:gravity="top"
+        android:singleLine="false"
+        android:textSize="13sp" />
+<!-- android:overScrollMode="ifContentScrolls"  -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/test_etxt_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/test_etxt_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/test_btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="登录" />
+
+            <Button
+                android:id="@+id/test_btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="注销" />
+
+            <Button
+                android:id="@+id/test_btn_devuid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="获取设备用户ID" />
+
+            <Button
+                android:id="@+id/test_btn_memuid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="获取会员用户ID" />
+
+            <Button
+                android:id="@+id/test_btn_isdrugfav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="药品是否收藏" />
+
+            <Button
+                android:id="@+id/test_btn_drugfav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="药品收藏" />
+
+            <Button
+                android:id="@+id/test_btn_drugunfav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="药品取消收藏" />
+
+            <Button
+                android:id="@+id/test_btn_getdrugfavs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="获取药品收藏" />
+
+            <Button
+                android:id="@+id/test_btn_getdrugstorefav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="获取药店收藏" />
+
+            <Button
+                android:id="@+id/test_btn_getdrugstorefavsnoloc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="获取药店收藏（无距离）" />
+
+            <Button
+                android:id="@+id/test_btn_legalnotice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="法律声明" />
+
+            <Button
+                android:id="@+id/test_btn_listmap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="地图列表" />
+
+            <Button
+                android:id="@+id/test_btn_pointmap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="地图定位" />
+            <Button
+                android:id="@+id/test_btn_userinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="会员详细信息" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

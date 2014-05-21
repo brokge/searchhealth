@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_page_bg"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <LinearLayout style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginRight="@dimen/actionbar_imgbtn_width_x1"
+            android:text="@string/member_login_title" />
+
+        <ImageView
+            style="@style/actionBarSpliter"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/member_login_btntitle_reg"
+            style="@style/actionBarTextButton"
+            android:layout_width="@dimen/actionbar_textbtn_width_x2word"
+            android:text="@string/register"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="15dp"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/member_login_edit_user"
+                style="@style/customEditText"
+                android:drawableLeft="@drawable/login_edittext_id_ico"
+                android:drawablePadding="10dp"
+                android:hint="@string/login_id_hint" />
+
+            <EditText
+                android:id="@+id/member_login_edit_pwd"
+                style="@style/customEditText"
+                android:drawableLeft="@drawable/login_edittext_pwd_ico"
+                android:drawablePadding="10dp"
+                android:hint="@string/login_pwd_hint"
+                android:password="true"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/member_login_bt_nok"
+                style="@style/customBigButton"
+                android:text="@string/login" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <CheckBox
+                    android:id="@+id/member_login_chk_autochk"
+                    style="@style/customCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/autologin_checkbox_bg"
+                    android:checked="true" />
+
+                <TextView
+                    style="@style/collectBottomCheckBoxText"
+                    android:text="@string/autologin"
+                    android:textColor="@color/login_checkbox_textcolor"
+                    android:textSize="@dimen/login_checkbox_textsize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/member_reCallPwd"
+                    style="@style/collectBottomCheckBoxText"
+                    android:text="@string/member_recallpwd"
+                    android:textColor="@color/login_checkbox_textcolor"
+                    android:textSize="@dimen/login_checkbox_textsize" />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/login_checkbox_textcolor" >
+                </View>
+
+                <TextView
+                    android:id="@+id/member_register"
+                    style="@style/collectBottomCheckBoxText"
+                    android:text="@string/member_register"
+                    android:textColor="@color/login_checkbox_textcolor"
+                    android:textSize="@dimen/login_checkbox_textsize" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

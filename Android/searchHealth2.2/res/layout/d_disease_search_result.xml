@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/actionBar">
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginRight="@dimen/actionbar_imgbtn_width_x1"
+            android:text="@string/drug_disers" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/searchBar" >
+
+        <EditText
+            android:id="@id/searchbar_inputtext"
+            style="@style/searchBarInputText"
+            android:hint="@string/diseaseSearch_hintText" >
+
+            <requestFocus>
+            </requestFocus>
+        </EditText>
+
+        <ImageButton
+            android:id="@id/searchbar_searchbtn"
+            style="@style/searchBarSearchButton" />
+    </LinearLayout>
+
+    <ImageView style="@style/searchBarSpliterDown" />
+
+    <include layout="@layout/async_begin" />
+
+    <include layout="@layout/async_error" />
+
+    <ListView
+        android:id="@+id/dis_search_result_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/drugtype_group_divider"
+        android:dividerHeight="2dp" >
+    </ListView>
+
+</LinearLayout>

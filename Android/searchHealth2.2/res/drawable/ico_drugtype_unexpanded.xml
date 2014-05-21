@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:layout_width="24dip"
+        android:layout_height="24dip"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/ico_drugtype_unexpanded_img" >
+    </ImageView>
+
+</LinearLayout> -->
+
+ <bitmap xmlns:android="http://schemas.android.com/apk/res/android"   
+ android:src="@drawable/group_indicator_unexpand" android:gravity="center" android:dither="true"/>  

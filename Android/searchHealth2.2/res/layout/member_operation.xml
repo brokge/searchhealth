@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginLeft="@dimen/actionbar_x2textbtn_with_x1imgbtn_margin"
+            android:text="手术记录" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <Button
+            android:id="@id/actionbar_add_btn"
+            style="@style/actionBarTextButton"
+            android:layout_width="@dimen/actionbar_textbtn_width_x2word"
+            android:text="@string/add" />
+    </LinearLayout>
+
+    <include layout="@layout/async_begin" />
+
+    <include layout="@layout/async_error" />
+
+    <coolbuy360.control.GestureListView
+        android:id="@+id/member_operation_liv"
+        android:choiceMode="singleChoice"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+		style="@style/drugList" >
+    </coolbuy360.control.GestureListView>    
+
+</LinearLayout>

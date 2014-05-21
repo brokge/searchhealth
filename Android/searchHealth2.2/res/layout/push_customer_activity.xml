@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/push_title_bar"
+        style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginRight="@dimen/actionbar_imgbtn_width_x1"
+            android:text="健康100的消息" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0px">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="0px"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/push_Title"
+                style="@style/diseaseDetailNameText"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:text="通知标题" />
+
+            <TextView
+                android:id="@+id/push_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="2013-12-12 12:12"
+                android:textColor="@color/content_subcontent_textcolor"
+                android:textSize="13dp" />
+
+            <View
+                style="@style/commonHorizontalSeparator"
+                android:layout_height="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <LinearLayout
+                style="@style/settingItemRange"
+                android:layout_margin="10dp"
+                android:background="#AAFFFFFF"
+                android:orientation="vertical"
+                android:padding="0dp" >
+
+                <TextView
+                    android:id="@+id/push_Content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容"
+                    android:textColor="@color/content_subcontent_textcolor"
+                    android:textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

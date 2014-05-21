@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customer_dialog_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="fill_horizontal|center_vertical"
+    android:background="#EDEDED"  
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/customer_reg_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:text="hahahhaha陈林伟"
+            android:textColor="@color/login_edittext_textcolor"
+            android:textSize="14dp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:background="@color/customer_dialog_green" >
+        </View>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:orientation="vertical"   >
+
+        <EditText
+            android:id="@+id/customer_reg_edit_user"
+            style="@style/customEditText"
+            android:drawableLeft="@drawable/login_edittext_id_ico"
+            android:drawablePadding="8dp"
+            android:hint="@string/login_id_hint"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/customer_reg_edit_confiremail"
+            style="@style/customEditText"
+            android:drawableLeft="@drawable/login_edittext_pwd_ico"
+            android:drawablePadding="8dp"
+            android:hint="@string/reg_email_hit"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/customer_reg_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="12dp"
+            android:textColor="@color/login_edittext_textcolor"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="1dp"
+        android:background="@drawable/customer_dialogbtnlayer"
+        android:orientation="horizontal"
+        android:paddingTop="1dp" >
+
+        <Button
+            android:id="@+id/customer_alertdialog_ok"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/bigbtn_height"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:background="@drawable/customer_dialogbtn"
+            android:text="确认"
+            android:textColor="@drawable/customer_dialogbtntextcolor"
+            android:textSize="@dimen/bigbtn_textsize" />
+
+        <View
+            android:id="@+id/customer_alertdialog_viewline"
+            android:layout_width="0.5dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:background="@color/customer_dialog_green" >
+        </View>
+
+        <Button
+            android:id="@+id/customer_alertdialog_cancel"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/bigbtn_height"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:background="@drawable/customer_dialogbtn"
+            android:text="取消"
+            android:textColor="@drawable/customer_dialogbtntextcolor"
+            android:textSize="@dimen/bigbtn_textsize" />
+    </LinearLayout>
+
+</LinearLayout>

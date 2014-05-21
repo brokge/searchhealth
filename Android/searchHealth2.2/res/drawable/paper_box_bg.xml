@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape>
+            <solid android:color="@color/bg_gray" />
+            <stroke android:width="@dimen/single_pix" android:color="@color/sh_line" />
+            <padding android:left="@dimen/single_pix" android:top="@dimen/single_pix" android:right="@dimen/single_pix" android:bottom="@dimen/single_pix" />
+        </shape>
+    </item>
+    <item android:state_selected="true">
+        <shape>
+            <solid android:color="@color/bg_gray" />
+            <stroke android:width="@dimen/single_pix" android:color="@color/sh_line" />
+            <padding android:left="@dimen/single_pix" android:top="@dimen/single_pix" android:right="@dimen/single_pix" android:bottom="@dimen/single_pix" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/bg_gray" />
+            <stroke android:width="@dimen/single_pix" android:color="@color/sh_line" />
+            <padding android:left="@dimen/single_pix" android:top="@dimen/single_pix" android:right="@dimen/single_pix" android:bottom="@dimen/single_pix" />
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <solid android:color="@color/white" />
+            <stroke android:width="@dimen/single_pix" android:color="@color/sh_line_one" />
+            <padding android:left="@dimen/single_pix" android:top="@dimen/single_pix" android:right="@dimen/single_pix" android:bottom="@dimen/single_pix" />
+        </shape>
+    </item>
+</selector>

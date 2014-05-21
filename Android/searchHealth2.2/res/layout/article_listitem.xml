@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/article_listitem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drug_list_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal" 
+    android:padding="10dp">
+    
+    <ImageView
+        android:id="@+id/article_listitem_image"
+        style="@style/drugPhotoImageView" 
+        android:visibility="gone"/>
+
+    <LinearLayout style="@style/drugListItemInfoRange">
+
+        <TextView
+            android:id="@+id/article_listitem_title"
+			style="@style/drugListItemNameText"
+            android:text="文章标题"/>
+
+        <TextView
+            android:id="@+id/article_listitem_resume"            
+			style="@style/drugListItemEnterpriseText"
+			android:lines="2"
+            android:text="文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要文章摘要"/>
+    </LinearLayout>
+
+    <ImageView style="@style/drugListItemRightArrowIcon"/>
+
+</LinearLayout>

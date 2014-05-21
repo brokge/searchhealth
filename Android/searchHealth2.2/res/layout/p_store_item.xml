@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/drugstoreListItemRange" >
+
+    <LinearLayout style="@style/drugstoreListItemCardRange" >
+
+        <LinearLayout
+            style="@style/drugstoreListItemInfoRange"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/p_store_item_name"
+                    style="@style/drugstoreListItemNameText"
+                    android:text="药店名称" />
+
+                <LinearLayout style="@style/drugstoreListItemPropertiesIconRange" >
+
+                    <ImageView
+                        android:id="@+id/p_store_item_bao"
+                        style="@style/drugstorePropertyIcon_yibao" />
+
+                    <ImageView
+                        android:id="@+id/p_store_item_ding"
+                        style="@style/drugstorePropertyIcon_din" />
+
+                    <ImageView
+                        android:id="@+id/p_store_item_song"
+                        style="@style/drugstorePropertyIcon_song" />
+
+                    <ImageView 
+                        android:id="@+id/p_store_item_dao"
+                        style="@style/drugstorePropertyIcon_dao" />
+
+                    <ImageView
+                        android:id="@+id/p_store_item_v"
+                        style="@style/drugstorePropertyIcon_v" />
+
+                    <ImageView
+                        android:id="@+id/p_store_item_24"
+                        style="@style/drugstorePropertyIcon_hours" />
+                </LinearLayout>
+            </LinearLayout>
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/drugstore_vertical_spliter_img"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="参考价格"
+                    android:textColor="@color/content_subcontent_textcolor"
+                    android:textSize="@dimen/drugstorelist_address_textsize" />
+
+                <TextView
+                    android:id="@+id/p_store_item_nowprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:text="￥17.00"
+                    android:textColor="@color/deepgreen"
+                    android:textSize="@dimen/drugstorelist_address_textsize"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout style="@style/drugstoreListItemBottomRange">
+
+            <LinearLayout
+                android:id="@id/drugstore_location_btn"
+                style="@style/drugstoreListItemBottomLeftButtonRange" >
+
+                <ImageView style="@style/drugstoreListItemBottomButtonIco_position" />
+
+                <TextView
+                    android:id="@+id/p_store_item_distance"
+                    style="@style/drugstoreListItemBottomButtonText"
+                    android:text="100m"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/drugstore_phonecall_btn"
+                style="@style/drugstoreListItemBottomRightButtonRange"  >
+
+                
+                <ImageView style="@style/drugstoreListItemBottomButtonIco_phonecall" />
+
+                <TextView
+                    style="@style/drugstoreListItemBottomButtonText"
+                    android:text="@string/phone_call" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

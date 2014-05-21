@@ -1,0 +1,181 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+-keepclassmembers class coolbuy360.service.CommonMethod {
+  public static void addWebImageShow;
+  public static void showImageZoomDialog;
+}
+-keepclassmembers class coolbuy360.service.OnWebViewImageListener {
+  public static void onImageClick;
+}
+#-keepclassmembers class coolbuy360.ArticleDetail{
+#   public *;
+#}
+# This is a configuration file for ProGuard.
+# http://proguard.sourceforge.net/index.html#manual/usage.html
+
+-ignorewarnings
+
+#【引用的库的jar，用于解析injars所指定的jar类】
+-libraryjars D:\Program Files\android-sdk-windows\platforms\android-8\android.jar
+#-libraryjars C:\Users\Administrator\android-sdks\platforms\android-8\android.jar
+-libraryjars /libs/locSDK_4.1.jar
+-libraryjars /libs/baidumapapi_v2_4_1.jar
+-libraryjars /libs/weibo.sdk.android.keep.jar
+-libraryjars /libs/weibo.sdk.android.sso.jar
+-libraryjars /libs/zxing.jar
+-libraryjars /libs/pushservice-3.0.jar
+-libraryjars /libs/universal-image-loader-1.5.6-with-src.jar
+
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-verbose
+
+# Optimization is turned off by default. Dex does not like code run
+# through the ProGuard optimize and preverify steps (and performs some
+# of these optimizations on its own).
+-dontoptimize
+-dontpreverify
+# Note that if you want to enable optimization, you cannot just
+# include optimization flags in your own project configuration file;
+# instead you will need to point to the
+# "proguard-android-optimize.txt" file instead of this one from your
+# project.properties file.
+
+-keepattributes *Annotation*
+-keep public class com.google.vending.licensing.ILicensingService
+-keep public class com.android.vending.licensing.ILicensingService
+#【不进行混淆保持原样】
+-keep public class * extends android.app.Activity　　
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+#自己加的===================
+-keep public class * extends android.os.storage.StorageManager
+-keep public class * extends android.os.Environment
+-keep class android.webkit.WebViewClient
+-keep class android.net.http.SslError
+#-keep class vi.com.gdi.bgl.android.java.**{*;}
+-keep class com.baidu.**{*;}
+-keep class com.weibo.**{*;}
+-keep class android.annotation.**{*;}
+-keep class cn.thinkit.**{*;}
+-keep class vi.com.gdi.bgl.**{*;}
+-keep class com.google.**{*;}
+-keep class com.baidu.mapapi.** {*; }
+-keep class com.baidu.platform.** {*; }
+-keep class com.baidu.location.** {*; }
+-keep class com.baidu.vi.** {*; }
+-keep class vi.com.gdi.bgl.android.** {*; }
+
+-keep class coolbuy360.service.CommonMethod {*; }
+-keep class coolbuy360.service.OnWebViewImageListener {*; }
+
+#==========================
+
+
+#【保护指定的类和类的成员的名称，如果所有指定的类成员出席（在压缩步骤之后）】
+# For native methods, see http://proguard.sourceforge.net/manual/examples.html#native
+-keepclasseswithmembernames class * { 
+	native <methods>;
+}
+
+# keep setters in Views so that animations can still work.
+# see http://proguard.sourceforge.net/manual/examples.html#beans
+-keepclassmembers public class * extends android.view.View {
+   void set*(***);
+   *** get*();
+}
+
+# We want to keep methods in Activity that could be used in the XML attribute onClick
+-keepclassmembers class * extends android.app.Activity {
+   public void *(android.view.View);
+}
+
+# For enumeration classes, see http://proguard.sourceforge.net/manual/examples.html#enumerations
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keep class * implements android.os.Parcelable {
+  public static final android.os.Parcelable$Creator *;
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+# The support library contains references to newer platform versions.
+# Don't warn about those in case this app is linking against an older
+# platform version.  We know about them, and they are safe.
+-dontwarn android.support.**
+
+
+
+#【jar包所在地址】 
+#-injars  androidtest.jar
+#【输出地址】
+#-outjars  out
+ 
+#-optimizationpasses 5
+#【混淆时不会产生形形色色的类名 】
+-dontusemixedcaseclassnames 
+#【指定不去忽略非公共的库类。 】
+-dontskipnonpubliclibraryclasses 
+-dontskipnonpubliclibraryclassmembers
+#【不预校验】
+-dontpreverify 
+-verbose
+#【优化】
+#-optimizations !code/simplification/arithmetic,!field/*,!class/merging/* 
+
+-keep public abstract interface com.asqw.android.Listener{
+#【所有方法不进行混淆】
+public protected <methods>;  
+}
+-keep public class com.asqw.android{
+#【对该方法不进行混淆】
+public void Start(java.lang.String); 
+}
+#【保护指定的类和类的成员，但条件是所有指定的类和类成员是要存在。】
+-keepclasseswithmembers class * { 
+public <init>(android.content.Context, android.util.AttributeSet);
+}
+-keepclasseswithmembers class * {
+public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+#【保护指定类的成员，如果此类受到保护他们会保护的更好 】
+-keepclassmembers class * extends android.app.Activity {
+public void *(android.view.View);
+#自己加的===================
+public void *(android.webkit.WebViewClient);
+public void *(android.net.http.SslError);
+#==========================
+}
+-keepclassmembers enum * {
+public static **[] values();
+public static ** valueOf(java.lang.String);
+}
+#【保护指定的类文件和类的成员】
+-keep class * implements android.os.Parcelable {
+public static final android.os.Parcelable$Creator *;
+}
+

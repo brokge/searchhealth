@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_page_bg"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true" >
+
+    <LinearLayout style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginRight="@dimen/actionbar_imgbtn_width_x1"
+            android:text="@string/member_recallpwd" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="15dp"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/member_resetpwd_edit_mobile"
+                style="@style/customEditText"
+                android:drawableLeft="@drawable/reg_edittext_mobile_ico"
+                android:drawablePadding="10dp"
+                android:hint="@string/hint_edt_mobile"
+                android:inputType="phone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/member_resetpwd_edit_email"
+                    style="@style/customEditText"
+                    android:layout_margin="0dp"
+                    android:layout_weight="1"
+	                android:drawableLeft="@drawable/reg_edittext_email_ico"
+	                android:drawablePadding="10dp"
+                    android:hint="@string/reg_email_hit"
+                    android:inputType="textEmailAddress" />
+
+                <ImageButton
+                    android:id="@+id/member_resetpwd_btn_emaildes"
+                    android:layout_width="@dimen/login_edittext_height"
+                    android:layout_height="@dimen/login_edittext_height"
+                    android:layout_gravity="right"
+                    android:background="@null"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/msp_info" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/member_resetpwd_edit_newpwd"
+                style="@style/customEditText"
+                android:drawableLeft="@drawable/login_edittext_pwd_ico"
+                android:drawablePadding="10dp"
+                android:hint="@string/changepwd_newpwd_hint"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/member_resetpwd_edit_renewpwd"
+                style="@style/customEditText"
+                android:drawableLeft="@drawable/login_edittext_pwd_ico"
+                android:drawablePadding="10dp"
+                android:hint="@string/changepwd_confinewpwd_hint"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/member_resetpwd_btn_reset"
+                style="@style/customBigButton"
+                android:text="@string/pwd_reset" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

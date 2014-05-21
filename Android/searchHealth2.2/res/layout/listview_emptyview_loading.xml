@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:layout_gravity="center"
+    android:gravity="center"
+    >
+    
+       <ProgressBar
+                                android:id="@+id/list_loading_progressbar"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_gravity="center"
+                                android:indeterminateBehavior="repeat"
+                                android:indeterminateDrawable="@drawable/member_score_checkloading"
+                                android:indeterminateDuration="1000"
+                                android:indeterminateOnly="true"
+                                android:max="1000"
+                                android:progress="5"
+                               
+                                 />
+</LinearLayout>

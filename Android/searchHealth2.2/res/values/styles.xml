@@ -1,0 +1,777 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+
+        -->
+    </style>
+    
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+   	<style name ="CustomWindowTitleBackground">  
+　　        <item name ="android:background">#1F497D</item>  
+    </style> 
+    
+    <style name="title"  parent="android:Theme">           
+　　      <item name ="android:windowTitleSize">45dp</item>   
+　　      <item name ="android:windowTitleBackgroundStyle">@style/CustomWindowTitleBackground</item>   
+　　</style>
+
+    <!-- <style name="Widget.Button.Toggle" parent="android:Widget">
+        <item name="android:background">@drawable/btn_toggle_bg</item>
+        <item name="android:textOn">@null</item>
+        <item name="android:textOff">@null</item>
+        <item name="android:clickable">true</item>
+        <item name="android:disabledAlpha">?android:attr/disabledAlpha</item>
+    </style> -->
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">false</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!-- 模糊 -->
+
+    </style>
+  <style name="customerdialog" parent="@android:style/Theme.Dialog">
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowIsTranslucent">true</item>      
+        <item name="android:windowBackground">@color/transparent</item>
+
+    </style>
+    <style name="dialogImgShow">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- 背景透明 -->
+        <!-- <item name="android:windowCloseOnTouchOutside">false</item> -->
+        <!-- <item name="android:windowActionModeOverlay">true</item> -->
+
+    </style>
+    <!-- 可上拉刷新控件 -->
+   	<style name="loading_small" parent="@android:style/Widget.ProgressBar.Small">
+	   <item name="android:indeterminateDrawable">@drawable/custom_progress_draw</item> 
+		<item name="android:layout_width">21dip</item> 
+		<item name="android:layout_height">21dip</item>
+		<item name="android:layout_gravity">center_vertical</item>
+	</style>
+   	<style name="myExpandableListView" parent="@android:style/Widget.ExpandableListView">
+   	    <item name="android:groupIndicator">@drawable/drugtype_expander_group</item>
+   	</style>
+
+    <style name="CustomProgressStyle" parent="@android:style/Widget.ProgressBar.Large">
+        <item name="android:minWidth">100dip</item>
+        <item name="android:maxWidth">100dip</item>
+        <item name="android:minHeight">100dip</item>
+        <item name="android:maxHeight">100dip</item>
+    </style>
+
+    <style name="foodRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/illfullcount</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="android:maxHeight">24dp</item>
+    </style>
+    
+    <style name="actionBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/actionbar_height</item>
+        <item name="android:background">@color/actionbar_bg_color</item>
+    </style>
+
+    <style name="actionBarPageTitle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lines">1</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/actionbar_title_textcolor</item>
+        <item name="android:textSize">@dimen/actionbar_title_textsize</item>
+    </style>
+
+    <style name="actionBarImgButton">
+        <item name="android:layout_width">@dimen/actionbar_imgbtn_width</item>
+        <item name="android:layout_height">@dimen/actionbar_imgbtn_height</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@drawable/btn_back_bg</item>
+    </style>
+
+    <style name="actionBarPreButton" parent="@style/actionBarImgButton">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:src">@drawable/btn_back_ico</item>
+    </style>
+
+    <style name="actionBarTextButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:lines">1</item>
+        <item name="android:background">@drawable/actionbar_textbtn_bg</item>
+        <item name="android:textColor">@color/actionbar_textbtn_textcolor</item>
+        <item name="android:textSize">@dimen/actionbar_textbtn_textsize</item>
+    </style>
+
+    <style name="actionBarSpliter">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:src">@drawable/actionbar_spliter_img</item>
+    </style>
+
+    <style name="searchBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="searchBarInputText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/searchbar_edittext_height</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/search_bar_input</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/searchbar_edittext_textsize</item>
+    </style>
+
+    <style name="searchBarSearchButton">
+        <item name="android:layout_width">@dimen/searchbar_btn_width</item>
+        <item name="android:layout_height">@dimen/searchbar_btn_height</item>
+        <item name="android:padding">7dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@drawable/search_bar_rightbutton_bg</item>
+        <item name="android:src">@drawable/search_bar_ico_searchbutton_img</item>
+    </style>
+
+    <style name="searchBarScanButton">
+        <item name="android:layout_width">@dimen/searchbar_btn_height</item>
+        <item name="android:layout_height">@dimen/searchbar_btn_height</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:padding">3dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@null</item>
+        <item name="android:src">@drawable/btn_scan_img</item>
+    </style>
+
+    <style name="searchBarSpliterDown">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:src">@drawable/line_down_shadow</item>
+    </style>
+
+    <style name="drugstoreFilterRadioButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@drawable/drugstore_filter_radiobtn_textcolor</item>
+        <item name="android:background">@drawable/drugstore_filter_radiobtn_bg</item>
+    </style>
+
+    <style name="drugstoreFilterGroupLaber">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/drug_list_name_textcolor</item>
+    </style>
+
+    <style name="drugstoreFilterResultButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">8dp</item>   
+        <item name="android:paddingBottom">8dp</item>     
+        <item name="android:background">@drawable/bigbtn_bg</item>
+        <item name="android:textSize">@dimen/bigbtn_textsize</item>
+        <item name="android:textColor">@drawable/bigbtn_textcolor</item>
+    </style>
+
+    <style name="drugstoreList">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:background">@color/drugstore_bg_gray</item>
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>
+    </style>   
+     
+    <style name="drugstoreListItemRange">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/drugstore_bg_gray</item>
+        <item name="android:descendantFocusability">blocksDescendants</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+    </style>    
+    
+    <style name="drugstoreListItemCardRange">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_card_full</item>
+        <item name="android:descendantFocusability">blocksDescendants</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    
+    <style name="drugstoreListItemInfoRange">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@null</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    
+    <style name="drugstoreListItemNameText">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/drugstorelist_name_textsize</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/drugstore_list_name_textcolor</item>
+    </style>
+    
+    <style name="drugstoreListItemAddressText">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/drugstorelist_address_textsize</item>
+        <item name="android:textColor">@color/drugstore_list_address_textcolor</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+        
+    <style name="drugstoreListItemPropertiesIconRange">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+        
+    <style name="drugstorePropertyIcon">        
+        <item name="android:layout_width">@dimen/drugstore_property_ico_width</item>
+        <item name="android:layout_height">@dimen/drugstore_property_ico_height</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:visibility">visible</item>
+    </style>
+    <style name="drugstorePropertyIcon_yibao" parent="@style/drugstorePropertyIcon">        
+        <item name="android:src">@drawable/ico_drug_yibao</item>
+    </style>
+    <style name="drugstorePropertyIcon_din" parent="@style/drugstorePropertyIcon">        
+        <item name="android:src">@drawable/ico_drugstore_din</item>
+    </style>
+    <style name="drugstorePropertyIcon_song" parent="@style/drugstorePropertyIcon">        
+        <item name="android:src">@drawable/ico_drugstore_song</item>
+    </style>
+    <style name="drugstorePropertyIcon_dao" parent="@style/drugstorePropertyIcon">        
+        <item name="android:src">@drawable/ico_drugstore_dao</item>
+    </style>
+    <style name="drugstorePropertyIcon_v" parent="@style/drugstorePropertyIcon">        
+        <item name="android:src">@drawable/ico_drugstore_v</item>
+    </style>
+    <style name="drugstorePropertyIcon_hours" parent="@style/drugstorePropertyIcon">        
+        <item name="android:src">@drawable/ico_drugstore_24</item>
+    </style>
+        
+    <style name="drugstoreListItemBottomRange">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/drugstorelist_bottom_range_height</item>
+        <item name="android:background">@drawable/bg_card_inner_bottom</item>
+    </style>
+        
+    <style name="drugstoreListItemBottomButtonRange">        
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+    </style>        
+    <style name="drugstoreListItemBottomLeftButtonRange" parent="@style/drugstoreListItemBottomButtonRange">        
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:background">@drawable/bg_card_inner_bottom_left</item>
+    </style>
+    <style name="drugstoreListItemBottomRightButtonRange" parent="@style/drugstoreListItemBottomButtonRange">        
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:background">@drawable/bg_card_inner_bottom_right</item>
+    </style>
+    <style name="drugstoreListItemBottomCenterButtonRange" parent="@style/drugstoreListItemBottomButtonRange">
+        <item name="android:background">@drawable/bg_card_inner_bottom_center</item>
+    </style>
+    
+    <style name="drugstoreListItemBottomButtonIco">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:padding">2dp</item> 
+    </style>
+    <style name="drugstoreListItemBottomButtonIco_position" parent="@style/drugstoreListItemBottomButtonIco">
+        <item name="android:src">@drawable/position_red_ico</item>
+    </style>
+    <style name="drugstoreListItemBottomButtonIco_phonecall" parent="@style/drugstoreListItemBottomButtonIco">
+        <item name="android:src">@drawable/phone_call_ico</item>
+    </style>
+    
+    <style name="drugstoreListItemBottomButtonText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:textSize">@dimen/drugstorelist_bottom_btn_textsize</item> 
+        <item name="android:textColor">@color/drugstore_list_address_textcolor</item>       
+    </style>  
+    
+    <style name="drugList">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:divider">@drawable/drugtype_group_divider</item>
+        <item name="android:dividerHeight">2dp</item>      
+    </style>
+    
+    <style name="drugPhotoImageView">
+        <item name="android:layout_width">@dimen/drug_photo_imageview_width</item>
+        <item name="android:layout_height">@dimen/drug_photo_imageview_height</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="android:background">@drawable/drug_photo_bg</item>
+    </style>    
+    
+    <style name="drugListItemInfoRange">        
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@null</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:padding">0dp</item>
+    </style>    
+    
+    <style name="drugListItemNameText">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/druglist_drugname_textsize</item>
+        <item name="android:textColor">@color/drug_list_name_textcolor</item>
+    </style>
+    
+    <style name="drugListItemEnterpriseText">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/druglist_enterprice_textsize</item>
+        <item name="android:textColor">@color/drug_list_enterprise_textcolor</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+    
+    <style name="drugListItemPropertiesIconRange">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+    
+    <style name="drugPropertyIcon">        
+        <item name="android:layout_width">@dimen/drugstore_property_ico_width</item>
+        <item name="android:layout_height">@dimen/drugstore_property_ico_height</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+    
+    <style name="drugListItemRightArrowIcon">        
+        <item name="android:layout_width">@dimen/drugtype_group_child_rightarrow_width</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:src">@drawable/list_right_arrow_ico</item>
+    </style>
+    
+    <style name="collectBottomRange">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/collect_bottom_range_height</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:background">@color/collect_bottom_range_bgcolor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">0dp</item>
+    </style>
+    
+    <style name="customCheckBox">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:checked">false</item>
+    </style>  
+    
+    <style name="collectBottomCheckBox" parent="@style/customCheckBox">        
+        <item name="android:layout_width">@dimen/collect_bottom_button_width</item>
+        <item name="android:layout_height">@dimen/collect_bottom_button_height</item>
+        <item name="android:background">@drawable/collect_checkbox</item>
+    </style>
+      
+    <style name="collectBottomCheckBoxText">        
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:text">@string/collect</item>
+        <item name="android:textColor">@color/collect_bottom_textcolor</item>
+        <item name="android:textSize">@dimen/collect_bottom_textsize</item>
+    </style>     
+    
+    <style name="drugstoreDetailInfoRange">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:padding">10dp</item>        
+    </style>
+    
+    <style name="drugstoreDetailNormalContentText">        
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/drugstore_detail_normal_textcolor</item>
+        <item name="android:textSize">@dimen/drugstore_detail_normal_textsize</item>  
+    </style>    
+    <style name="drugstoreDetailLaberText" parent="@style/drugstoreDetailNormalContentText">  
+        <item name="android:layout_width">@dimen/drugstore_detail_table_column1_width</item>      
+        <item name="android:textColor">@color/drugstore_detail_normal_textcolor</item>
+    </style>
+    
+    <style name="drugstoreDetailNormalTableRow">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">5dp</item>
+    </style>
+    
+    <style name="diseaseListItemNameText">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/disease_list_name_textsize</item>
+        <item name="android:textColor">@color/disease_list_name_textcolor</item>
+    </style>
+    
+    <style name="diseaseListItemSecondNameText">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/disease_list_secondname_textsize</item>
+        <item name="android:textColor">@color/disease_list_secondname_textcolor</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+    
+    <style name="diseaseDetailNameText">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/diseaseinfo_name_textsize</item>
+        <item name="android:textColor">@color/content_title_textcolor</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:focusable">false</item>
+    </style>
+    
+    <style name="programGridView">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:drawSelectorOnTop">false</item>
+        <item name="android:numColumns">4</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+    </style>
+    
+    <style name="customEditText">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/login_edittext_height</item>
+        <item name="android:layout_gravity">center_horizontal</item>       
+        <item name="android:layout_margin">5dp</item> 
+         <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@drawable/login_edittext_bg</item>
+        <item name="android:textSize">@dimen/login_edittext_textsize</item>
+        <item name="android:textColor">@color/login_edittext_textcolor</item>
+    </style>
+    
+    <style name="customBigButton">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/bigbtn_height</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bigbtn_bg</item>
+        <item name="android:textSize">@dimen/bigbtn_textsize</item>
+        <item name="android:textColor">@drawable/bigbtn_textcolor</item>
+    </style>
+    
+    <style name="customDeleteButton">        
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/delbtn_bg</item>
+        <item name="android:textSize">@dimen/delbtn_textsize</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:text">@string/delete</item>
+    </style>
+    
+    <style name="commonDiseaseLabTextView">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:lines">1</item>
+        <item name="android:visibility">visible</item>
+        <item name="android:textSize">@dimen/disease_common_textsize</item>
+    </style>
+    
+    <style name="settingItemRange">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <!-- <item name="android:focusable">true</item> -->
+        <!-- <item name="android:focusableInTouchMode">true</item> -->
+    </style>
+    
+    <style name="settingGroupTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">@dimen/setting_group_title_textsize</item>
+        <item name="android:textColor">@color/setting_group_title_textcolor</item>
+    </style>
+    
+    <style name="settingItemText_SingleLine">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">@dimen/setting_item_textsize</item>
+        <item name="android:textColor">@color/setting_item_textcolor</item>
+    </style> 
+    
+    <style name="settingItemText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:textSize">@dimen/setting_item_textsize</item>
+        <item name="android:textColor">@color/setting_item_textcolor</item>
+    </style>
+    
+    <style name="settingItemHeadText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textSize">@dimen/setting_item_textsize</item>
+        <item name="android:textColor">@color/setting_item_textcolor</item>
+    </style>
+    
+    <style name="settingItemRightContentText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textSize">@dimen/setting_item_sub_textsize</item>
+        <item name="android:textColor">@color/setting_item_sub_textcolor</item>
+    </style>
+    
+    <style name="settingItemRightContentTextHighlight" parent="@style/settingItemRightContentText">
+        <item name="android:textSize">@dimen/setting_item_selected_textsize</item>
+        <item name="android:textColor">@color/setting_item_selected_textcolor</item>
+    </style>
+    
+    <style name="settingItemRightContentEditText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">40dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">right</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingTop">7dp</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@drawable/login_edittext_bg</item>
+        <item name="android:textSize">@dimen/setting_item_sub_textsize</item>
+        <item name="android:textColor">@color/setting_item_sub_textcolor</item>
+    </style>
+    
+    <style name="settingItemSubText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:textSize">@dimen/setting_item_sub_textsize</item>
+        <item name="android:textColor">@color/setting_item_sub_textcolor</item>
+    </style>
+    
+    <style name="settingItemCheckBox">
+        <item name="android:layout_width">@dimen/setting_item_checkbox_width</item>
+        <item name="android:layout_height">@dimen/setting_item_checkbox_height</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_marginRight">@dimen/setting_item_rightico_marginright</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawableLeft">@null</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:background">@drawable/setting_checkbox_bg</item>
+    </style>
+    
+    <style name="settingItemRightArrow">
+        <item name="android:layout_width">@dimen/setting_item_rightarrow_width</item>
+        <item name="android:layout_height">@dimen/setting_item_rightarrow_height</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginRight">@dimen/setting_item_rightico_marginright</item>
+        <item name="android:src">@drawable/list_right_arrow_ico</item>
+    </style>
+    
+    <style name="nomalSelectorItemTextView">        
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/disease_list_name_textsize</item>
+        <item name="android:textColor">@color/disease_list_name_textcolor</item>
+    </style>
+    
+    <!-- Card Styles -->    
+    <style name="commonHorizontalSeparator">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/common_horizontal_separator</item>
+    </style>
+    
+    <style name="commonItemRange">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">0dp</item>
+        <item name="android:layout_marginRight">0dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:clickable">true</item>
+        <!-- <item name="android:focusable">true</item> -->
+        <!-- <item name="android:focusableInTouchMode">true</item> -->
+    </style>
+    
+    <style name="detail_cut_line">
+		<item name="android:layout_width">fill_parent</item>
+		<item name="android:layout_height">2.0dip</item>
+		<item name="android:layout_marginTop">8.0dip</item>
+		<item name="android:layout_marginBottom">10.0dip</item>
+		<item name="android:layout_marginLeft">6.0dip</item>
+		<item name="android:layout_marginRight">6.0dip</item>
+		<item name="android:background">@drawable/line_down_shadow</item>
+	</style>	
+    
+    <style name="shadow_box">
+        <item name="android:background">@drawable/shadow_box_bg_img</item>
+        <item name="android:layout_marginLeft">0dip</item>
+        <item name="android:layout_marginTop">0dip</item>
+        <item name="android:layout_marginRight">0dip</item>
+    </style>
+    
+    <style name="paper_box">
+        <item name="android:background">@drawable/paper_box_bg_img</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_marginTop">10.0dip</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+    </style>
+    
+    <style name="paper_box_bottom">
+        <item name="android:background">@drawable/paper_box_bottom_bg</item>
+        <item name="android:layout_marginBottom">10.0dip</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+        <item name="android:layout_marginRight">10.0dip</item>
+    </style>
+    
+    <style name="popwin_anim_style">
+     <item name="android:windowEnterAnimation">@animator/pop_score_show_animation</item>
+     <item name="android:windowExitAnimation">@animator/pop_score_hide_animation</item>
+</style>
+</resources>

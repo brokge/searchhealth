@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginRight="@dimen/actionbar_imgbtn_width_x1"
+            android:text="@string/drug_product" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/searchBar" >
+
+        <EditText
+            android:id="@id/searchbar_inputtext"
+            style="@style/searchBarInputText"
+            android:hint="@string/drugSearch_hintText" >
+        </EditText>
+
+        <ImageButton
+            android:id="@id/searchbar_searchbtn"
+            style="@style/searchBarSearchButton" />
+
+        <LinearLayout
+            style="@style/searchBarScanButton"
+            android:orientation="vertical"
+            android:padding="0dp" >
+
+            <ImageButton
+                android:id="@id/searchbar_scanbtn"
+                style="@style/searchBarScanButton"
+                android:layout_width="30dip"
+                android:layout_height="0dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="@string/scan_scan"
+                android:textColor="@color/deepgreen"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/searchBarSpliterDown" />
+
+    <include layout="@layout/async_begin" />
+
+    <include layout="@layout/async_error" />
+
+    <ListView
+        android:id="@id/druglist_listview"
+        style="@style/drugList" >
+    </ListView>
+
+</LinearLayout>

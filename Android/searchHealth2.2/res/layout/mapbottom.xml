@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/location_address_btn"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:padding="10dp"
+    android:background="@drawable/map_location_btn_bg"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/location_address_ico"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/icon_loc" />
+
+    <TextView
+        android:id="@+id/location_address_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:textSize="@dimen/drugstoremap_address_textsize" 
+        android:lines="1"/>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drug_list_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal" 
+    android:padding="10dp">
+    
+    <ImageView
+        android:id="@+id/p_listview_img"
+        style="@style/drugPhotoImageView" />
+
+    <LinearLayout style="@style/drugListItemInfoRange">
+
+        <TextView
+            android:id="@+id/p_listview_title"
+			style="@style/drugListItemNameText"
+            android:text="@string/drug_product"/>
+
+        <TextView
+            android:id="@+id/p_listview_store"            
+			style="@style/drugListItemEnterpriseText"
+            android:text="公司名称"/>
+
+        <LinearLayout style="@style/drugListItemPropertiesIconRange" >
+
+            <ImageView
+                android:id="@+id/p_listview_otc"
+				style="@style/drugPropertyIcon"/>
+
+            <ImageView
+                android:id="@+id/p_listview_bao"
+				style="@style/drugPropertyIcon"/>
+
+            <ImageView
+                android:id="@+id/p_listview_h"
+				style="@style/drugPropertyIcon"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/drugListItemRightArrowIcon"/>
+
+</LinearLayout>

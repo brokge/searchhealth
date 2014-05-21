@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/collect_btn"
+    style="@style/collectBottomRange" >
+
+    <CheckBox
+        android:id="@id/collect_checkbox"
+        style="@style/collectBottomCheckBox" />
+
+    <TextView style="@style/collectBottomCheckBoxText" />
+
+</LinearLayout>

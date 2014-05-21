@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="darkgray">#ff404040</color>
+    <color name="black">#ff000000</color>
+    <color name="blackdark">#ff000000</color>
+    <color name="red">#ffff0000</color>
+    <color name="color">#ff808080</color>
+    <color name="green">#ff00ff00</color>
+    <color name="deepgreen">#295307</color>
+    <color name="lightgray">#ffc0c0c0</color>
+    <color name="white">#ffffffff</color>
+    <color name="yellow">#ffffff00</color>
+    <color name="blue">#ff0000ff</color>
+    <color name="gray">#ff808080</color>
+    <color name="bg_gray">#ffe4e4e4</color>
+    <color name="magenta">#ffff00ff</color>
+    <color name="cyan">#ff00ffff</color>
+    <color name="weightgreen">#2F4F4F</color>
+    <color name="transparent">#00000000</color>
+    <color name="half_transparent">#50000000</color><!-- 0-99是透明程度 -->
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_view">#b0000000</color>
+    <color name="sh_line">#ffcccccc</color>
+    <color name="sh_line_one">#ffdddddd</color>
+    <color name="sh_line_two">#ffa8a8a8</color>
+    <color name="deepred">#B05040</color>
+    
+    <color name="content_title_textcolor">#3d3d3d</color>
+    <color name="content_subcontent_textcolor">#707070</color>
+        
+    <color name="actionbar_bg_color">#55A721</color>
+    <color name="actionbar_btn_bg_color">#83BD5E</color>
+    <color name="actionbar_title_textcolor">#ffffff</color>
+    <color name="actionbar_textbtn_textcolor">#ffffff</color>
+    
+    <color name="drugtype_group_bgcolor">#ffffff</color>
+    <color name="drugtype_group_bgcolor_press">#E3EDD4</color>
+    <color name="drugtype_group_bgcolor_expended">#C8E797</color>
+    <color name="drugtype_group_textcolor">#353533</color>    
+    
+    <color name="drugstore_bg_gray">#F0F0F0</color>  
+    <color name="drugstore_list_name_textcolor">#353533</color>   
+    <color name="drugstore_list_address_textcolor">#6a6a6a</color>   
+    <color name="drugstore_list_bottom_btn_textcolor">#6a6a6a</color>    
+    
+    <color name="drugstore_detail_normal_textcolor">#6a6a6a</color>    
+    
+    <color name="drug_list_bgcolor">#ffffff</color>
+    <color name="drug_list_bgcolor_press">#C8E797</color>
+    <color name="drug_list_name_textcolor">#353533</color>   
+    <color name="drug_list_enterprise_textcolor">#6a6a6a</color>     
+    
+    <color name="disease_list_name_textcolor">#353533</color>   
+    <color name="disease_list_secondname_textcolor">#6a6a6a</color> 
+    
+    <color name="background_normal">#fffffbf0</color>
+    <color name="background_normal_press">#ffece7da</color>
+    <color name="background_normal_selected">#fffff2ab</color>
+    <color name="background_undercard">#ffe4e2d7</color>
+    <color name="background_undercard_press">#ffe0d7c9</color>
+    <color name="transparent_background">#00ffffff</color>
+    
+    <color name="collect_bottom_range_bgcolor">#7fa3a3a3</color>
+    <color name="collect_bottom_textcolor">#353533</color>
+    
+    <color name="login_edittext_textcolor">#6a6a6a</color>
+    <color name="bigbtn_normal_textcolor">#096901</color>
+    <color name="bigbtn_press_textcolor">#555555</color>
+    <color name="login_checkbox_textcolor">#16910c</color>
+    
+    <color name="headinfo_bg">#edfdd6</color>
+    
+    <color name="setting_bgcolor">#EDEDED</color>
+    <color name="setting_item_bgcolor">#ffffff</color>
+    <color name="setting_item_bgcolor_press">#C8E797</color>
+    <color name="setting_group_title_textcolor">#ff333333</color>
+    <color name="setting_item_textcolor">#ff333333</color>
+    <color name="setting_item_sub_textcolor">#ff6a6a6a</color>
+    <color name="setting_item_selected_textcolor">#ff00287B</color>
+    
+    <color name="exposure_tab_bgcolor">#82BE1E</color>
+    <color name="exposure_tab_bgcolor_selected">#E3EDD4</color>
+    <color name="exposure_tab_textcolor">#ffffff</color>
+    <color name="exposure_tab_textcolor_selected">#343434</color>
+    
+    <color name="author_text">#0e5986</color>
+    
+    <color name="news_item_title" >#ff000000</color>
+    <color name="news_item_content">#ff888888</color>
+            
+    <color name="customer_dialog_green">#096901</color>
+    <color name="customer_dialog_bgcolor">#EDEDED</color>
+    <color name="transparent_gray">#55808080</color>
+    <color name="transparent_whrite">#55ffffff</color>
+    <color name="gray_yellow">#F7F7F7</color>
+    <color name="gray_yellow_big_left">#F5EDC6</color>
+    <color name="gray_yellow_big_right">#F7FEFD</color>
+    <color name="gray_yellow_big_right2">#E1F7CE</color>
+     
+</resources>

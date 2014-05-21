@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/headinfo_bg"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/dissertation_detail_head_title"
+        style="@style/diseaseDetailNameText"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="专题标题专题名称专题标题专题" />
+
+    <View
+        style="@style/commonHorizontalSeparator"
+        android:layout_height="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" 
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/dissertation_detail_head_image"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/promotion_def_pic" />
+
+    <LinearLayout
+        style="@style/settingItemRange"
+        android:layout_margin="10dp"
+        android:background="@null"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/dissertation_detail_head_resume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要专题摘要"
+            android:textColor="@color/content_subcontent_textcolor" />
+    </LinearLayout>
+
+    <ImageView style="@style/searchBarSpliterDown" />
+
+</LinearLayout>

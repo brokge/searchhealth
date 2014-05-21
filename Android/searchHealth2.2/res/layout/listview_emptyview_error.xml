@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:layout_gravity="center"
+    android:gravity="center"
+    >
+      <TextView
+        android:id="@+id/listview_empty_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"      
+        android:layout_gravity="center"
+        android:text="@string/error_nonetwork" 
+        android:layout_marginBottom="8dp"      
+         >
+    </TextView>
+
+    <Button
+        android:id="@+id/listview_empty_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textColor="@android:color/white" 
+        android:textSize="@dimen/delbtn_textsize"
+        android:background="@drawable/delbtn_bg"
+        android:layout_gravity="center"
+       android:gravity="center"
+        android:text="重试"        
+         >
+    </Button>
+
+</LinearLayout>

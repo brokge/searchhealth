@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drug_list_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/more_weibo_listview_img"
+        style="@style/drugPhotoImageView" />
+
+    <LinearLayout style="@style/drugListItemInfoRange">
+
+        <TextView
+            android:id="@+id/more_weibo_listview_name"
+			style="@style/drugListItemNameText"
+            android:text="李成华"/>
+
+        <TextView
+            android:id="@+id/more_weibo_listview_fun"
+			style="@style/drugListItemEnterpriseText"
+            android:layout_toRightOf="@+id/more_weibo_listview_name"
+            android:text="粉丝数：1000" />
+
+        <TextView
+            android:id="@+id/more_weibo_listview_descri"  
+			style="@style/drugListItemEnterpriseText"
+            android:lines="2"
+            android:text="擅长领域"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/more_weibo_listview_h"
+        style="@style/drugListItemRightArrowIcon"/>
+
+</LinearLayout>

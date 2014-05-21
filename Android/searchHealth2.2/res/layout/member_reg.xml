@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true" 
+    android:focusableInTouchMode="true"  >
+
+    <LinearLayout style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginRight="@dimen/actionbar_imgbtn_width_x1"
+            android:text="@string/member_reg_title" />
+
+        <ImageView
+            style="@style/actionBarSpliter"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/member_reg_btntitle_up"
+            style="@style/actionBarTextButton"
+            android:layout_width="@dimen/actionbar_textbtn_width_x2word"
+            android:text="@string/login"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/reg_explain_1"
+            android:textColor="@color/login_edittext_textcolor"
+            android:textSize="@dimen/login_edittext_textsize" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/reg_explain_2"
+            android:textColor="@color/login_edittext_textcolor"
+            android:textSize="@dimen/login_edittext_textsize" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="15dp" >
+
+             <!-- <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center"
+                 android:text="@string/member_txt_info_reg"
+                 android:textColor="@color/login_edittext_textcolor" /> -->
+
+            <EditText
+                android:id="@+id/member_reg_edit_user"
+                style="@style/customEditText"
+                android:drawableLeft="@drawable/reg_edittext_mobile_ico"
+                android:drawablePadding="8dp"
+                android:hint="@string/hint_edt_mobile"
+                android:inputType="phone" />
+
+            <EditText
+                android:id="@+id/member_reg_edit_confiremail"
+                style="@style/customEditText"
+                android:drawableLeft="@drawable/reg_edittext_email_ico"
+                android:drawablePadding="8dp"
+                android:hint="@string/reg_email_hit"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/member_reg_edit_pwd"
+                style="@style/customEditText"
+                android:drawableLeft="@drawable/login_edittext_pwd_ico"
+                android:drawablePadding="8dp"
+                android:hint="@string/login_pwd_hint"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/member_reg_edit_confirmpwd"
+                style="@style/customEditText"
+                android:drawableLeft="@drawable/login_edittext_pwd_ico"
+                android:drawablePadding="8dp"
+                android:hint="@string/reg_pwd_confirmpwd"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/member_reg_btn_ok"
+                style="@style/customBigButton"
+                android:text="@string/reg_ok" />
+
+            <Button
+                android:id="@+id/member_reg_btn_reset"
+                style="@style/customBigButton"
+                android:text="@string/reg_reset" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

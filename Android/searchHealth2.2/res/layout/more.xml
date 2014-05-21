@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- android:descendantFocusability="blocksDescendants" -->
+
+    <LinearLayout style="@style/actionBar" >
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:text="@string/more" />
+        
+        <!-- <Button  android:id="@+id/testbtn" 
+            android:layout_weight="0"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            
+             /> -->
+    </LinearLayout>
+
+    <GridView
+        android:id="@id/program_gridview"
+        style="@style/programGridView" />
+
+</LinearLayout>

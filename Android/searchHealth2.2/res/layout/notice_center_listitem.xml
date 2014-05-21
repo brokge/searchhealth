@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/notice_center_listitem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drug_list_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal" 
+    android:paddingTop="10dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp">
+
+    <LinearLayout style="@style/drugListItemInfoRange">
+
+        <TextView
+            android:id="@+id/notice_center_listitem_title"
+			style="@style/drugListItemNameText"
+            android:text="消息标题"/>
+
+        <TextView
+            android:id="@+id/notice_center_listitem_content"            
+			style="@style/drugListItemEnterpriseText"
+			android:lines="2"
+            android:text="消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容消息内容"/>
+
+        <TextView
+            android:id="@+id/notice_center_listitem_sendtime"            
+			style="@style/drugListItemEnterpriseText"
+			android:lines="1"
+            android:text="2013-12-11 20:12:11"/>
+    </LinearLayout>
+
+    <ImageView style="@style/drugListItemRightArrowIcon"/>
+
+</LinearLayout>

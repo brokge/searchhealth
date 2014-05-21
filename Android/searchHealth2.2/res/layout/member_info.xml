@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:focusable="true" 
+    android:focusableInTouchMode="true" >
+
+    <LinearLayout
+        android:id="@+id/member_info_title_bar"
+        style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginLeft="@dimen/actionbar_x2textbtn_with_x1imgbtn_margin"
+            android:text="@string/member_info" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <Button
+            android:id="@id/actionbar_save_btn"
+            style="@style/actionBarTextButton"
+            android:layout_width="@dimen/actionbar_textbtn_width_x2word"
+            android:text="@string/save" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_below="@id/member_info_title_bar"
+        android:layout_marginTop="@dimen/actionbar_height"
+        android:background="@color/setting_bgcolor"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                style="@style/settingGroupTitle"
+                android:text="基本信息" />
+
+            <LinearLayout
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_head"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="账        号" />
+
+                <TextView
+                    android:id="@+id/member_info_txv_username"
+                    style="@style/settingItemRightContentText"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_body"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="姓        名" />
+
+                <EditText
+                    android:id="@+id/member_info_edt_membername"
+                    style="@style/settingItemRightContentEditText"
+                    android:hint="@string/hint_edt_membername" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/member_info_item_sex"
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_body"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="性        别" />
+
+                <TextView
+                    android:id="@+id/member_info_txv_sex"
+                    style="@style/settingItemRightContentText"
+                    android:text="请选择性别" />
+
+                <ImageView style="@style/settingItemRightArrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_body"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="身  份  证" />
+
+                <EditText
+                    android:id="@+id/member_info_edt_idcardnum"
+                    style="@style/settingItemRightContentEditText"
+                    android:inputType="text"
+                    android:hint="@string/hint_edt_idcardnum" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/member_info_item_birthday"
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_tail"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="出生日期" />
+
+                <TextView
+                    android:id="@+id/member_info_txv_birthday"
+                    style="@style/settingItemRightContentText"
+                    android:text="@string/txt_info_txv_birthday" />
+
+                <ImageView style="@style/settingItemRightArrow" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/settingGroupTitle"
+                android:text="联系方式" />
+
+            <LinearLayout
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_head"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="手        机" />
+
+                <EditText
+                    android:id="@+id/member_info_edt_mobile"
+                    style="@style/settingItemRightContentEditText"
+                    android:inputType="phone"
+                    android:hint="@string/hint_edt_mobile" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_body"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="固定电话" />
+
+                <EditText
+                    android:id="@+id/member_info_edt_telephone"
+                    style="@style/settingItemRightContentEditText"
+                    android:inputType="phone"
+                    android:hint="@string/hint_edt_telephone"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_body"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="邮        箱" />
+
+                <EditText
+                    android:id="@+id/member_info_edt_email"
+                    style="@style/settingItemRightContentEditText"                    
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/hint_edt_email" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_tail"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="住        址" />
+
+                <EditText
+                    android:id="@+id/member_info_edt_familyaddress"
+                    style="@style/settingItemRightContentEditText"
+                    android:gravity="left"
+                    android:hint="@string/hint_edt_address"
+                    android:minHeight="60dp"
+                    android:singleLine="false"  />
+               </LinearLayout>
+
+            <TextView
+                style="@style/settingGroupTitle"
+                android:text="其它信息" />
+
+            <LinearLayout
+                android:id="@+id/member_info_item_educationlevel"
+                style="@style/settingItemRange"
+                  android:background="@drawable/settingitem_head"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="文化程度" />
+
+                <TextView
+                    android:id="@+id/member_info_txv_educationlevel"
+                    style="@style/settingItemRightContentText"
+                    
+                    android:text="@string/txt_info_txv_educationlevel" />
+
+                <ImageView style="@style/settingItemRightArrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/member_info_item_job"
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_body"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="职        业" />
+
+                <TextView
+                    android:id="@+id/member_info_txv_job"
+                    style="@style/settingItemRightContentText"
+                    android:text="@string/txt_info_txv_job" />
+
+                <ImageView style="@style/settingItemRightArrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/member_info_item_hc"
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_body"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="医保情况" />
+
+                <TextView
+                    android:id="@+id/member_info_txv_hc"
+                    style="@style/settingItemRightContentText"
+                    android:text="@string/txt_info_txv_hc" />
+
+                <ImageView style="@style/settingItemRightArrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_body"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="医疗开支" />
+
+                <EditText
+                    android:id="@+id/member_info_edt_income"
+                    style="@style/settingItemRightContentEditText"
+                    android:inputType="number"
+                    android:hint="@string/hint_edt_income"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/member_info_item_buyway"
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_body"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="购药途径" />
+
+                <TextView
+                    android:id="@+id/member_info_txv_buyway"
+                    style="@style/settingItemRightContentText"
+                    android:text="@string/txt_info_txv_buyway" />
+
+                <ImageView style="@style/settingItemRightArrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_tail"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="首选医院" />
+
+                <EditText
+                    android:id="@+id/member_info_edt_commonhospital"
+                    style="@style/settingItemRightContentEditText"
+                    android:hint="@string/hint_edt_commonhospital" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

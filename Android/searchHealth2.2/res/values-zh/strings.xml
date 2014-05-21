@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="app_name">健康100</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="drug_product">药品查询 </string>
+    <string name="news">健康资讯 </string>
+    <string name="drug_store">附近药店</string>
+    <string name="drug_disers">疾病查询</string>
+    <string name="drug_member">会员中心</string>
+    <string name="drug_detail">药品详情</string>
+    <string name="drug_descri">药品说明书</string>
+    <string name="desease_detail">疾病详情</string>
+    <string name="legal_notice">法律声明</string>
+    <string name="member_unlogin">未登录</string>
+    <string name="more">更多</string>
+    <string name="feedback_txtcontent">亲！请填写您有关我们的宝贵意见，我们将不断提升服务质量哦！（500字以内）</string>
+
+    <item name="drugtype_id" type="id"></item>
+    <item name="drugtype_name" type="id"></item>
+
+    <string name="diseaseSearch_hintText">输入部位、症状、疾病名称...</string>
+    <string name="drugSearch_hintText">输入任何健康词条都有结果</string>
+    <string name="msg_load_image_fail">图片加载失败</string>
+    <string name="exposure_title">曝光栏</string>
+    <string name="exposure_webviewtitle">网页来源</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="member_register">注册账户</string>
+    <string name="member_recallpwd">找回密码</string>
+    <string name="member_checkpwd">验证密码</string>
+    <string name="member_login_title">会员登录</string>
+    <string name="member_reg_title">注册</string>
+    <string name="member_pwd_title">修改密码</string>
+    <string name="changepwd_oldpwd_hint">输入当前密码</string>
+    <string name="changepwd_newpwd_hint">输入新密码</string>
+    <string name="changepwd_confinewpwd_hint">再次确认新密码</string>
+    <string name="changepwd_submit">确定修改</string>
+    <string name="login_id_hint">手机号码/会员帐号</string>
+    <string name="login_pwd_hint">登录密码</string>
+    <string name="reg_pwd_confirmpwd">确认密码</string>
+    <string name="reg_email_hit">邮箱确认</string>
+    <string name="reg_ok">注册</string>
+    <string name="reg_reset">重置</string>
+    <string name="pwd_reset">重置密码</string>
+    <string name="autologin">自动登录</string>
+    <string name="member_txt_nopermission"> 登录后，您可以使用用药管理、药品和药店云端收藏功能</string>
+    <string name="member_txt_permission">您已经是N家药店的会员，您可以享受N折购药优惠</string>
+    <string name="member_txt_info_reg">健康100会员注册</string>
+    <string name="member_txt_info_login">健康100会员登录</string>
+    <string name="member_collect_drug">药品收藏</string>
+    <string name="member_collect_store">药店收藏</string>
+    <string name="member_scorelog">健康值明细</string>
+    <string name="member_scoreexchange">健康值兑换</string>
+    <string name="feedback">意见反馈</string>
+    <string name="send">发送</string>
+    <string name="setting">设置</string>
+    <string name="member_info">个人资料</string>
+    <string name="error_nonetwork">网络连接不可用，请检查网络设置</string>
+    <string name="error_location">定位失败，请检查是否开启手机定位</string>
+    <string name="error_timestamp">请求错误，请检查您的手机日期时间设置是否正确</string>
+    <string name="error_unlogin">请求错误，重新登录</string>
+    <string name="more_weibodoctor">微博医生</string>
+    <string name="phone_call">致电</string>
+    <string name="drugstore_detail">药店详情</string>
+    <string name="collect">收藏</string>
+    <string name="save">保存</string>
+    <string name="ok">确定</string>
+    <string name="add">添加</string>
+    <string name="delete">删除</string>
+    <string name="program_about">关于</string>
+    <string name="program_changepwd">修改密码</string>
+    <string name="program_drugfav">药品收藏</string>
+    <string name="program_drugstorefav">药店收藏</string>
+    <string name="program_exposure">曝光栏</string>
+    <string name="program_news">资讯</string>
+    <string name="program_dissertation">专题</string>
+    <string name="program_feedback">意见反馈</string>
+    <string name="program_historyofmedicine">用药史</string>
+    <string name="program_purchasehistory">购药记录</string>
+    <string name="program_remind">用药提醒</string>
+    <string name="program_setting">设置</string>
+    <string name="program_vipcards">我的会员卡</string>
+    <string name="program_weibodoc">微博医生</string>
+    <string name="program_memberinfo">个人资料</string>
+    <string name="program_healthdossier">健康档案</string>
+    <string name="program_noticecenter">消息中心</string>
+    <string name="program_healthtrack">健康记录</string>    
+    <string name="program_healthscore">我的健康值</string>
+     <string name="program_healthscore_earnmore">赚取更多健康值</string>
+    <string name="reg_explain_1">    本应用暂未开放注册功能，若您是附近药店的会员，可与该药店联系获取对应的账号和密码。若您还不是会员，可以前往附近药店登记会员并获取登录账号。</string>
+    <string name="reg_explain_2">    成为会员后，您将享受到药店优惠、用药管理、药品和药店云端收藏、个人健康档案管理等功能服务。</string>
+    <string name="hint_edt_membername">请输入姓名</string>
+    <string name="hint_edt_idcardnum">请输入身份证号</string>
+    <string name="hint_edt_mobile">请输入手机号码</string>
+    <string name="hint_edt_telephone">请输入固定电话</string>
+    <string name="hint_edt_email">请输入Email地址</string>
+    <string name="hint_edt_commonhospital">请输入首选就诊医院</string>
+    <string name="hint_edt_address">请输入住址</string>
+    <string name="hint_edt_income">请输入平均每年医疗开支</string>
+    <string name="txt_info_txv_birthday">请选择您的出生日期</string>
+    <string name="txt_info_txv_educationlevel">请选择文化程度</string>
+    <string name="txt_info_txv_job">请选择职业</string>
+    <string name="txt_info_txv_hc">请选择医保情况</string>
+    <string name="txt_info_txv_buyway">请选择常用的购药途径</string>
+    <string name="title_activity_news_sub1">NewsSub1</string>
+	<string name="news_header_title_top">置顶</string>
+	<string name="scan_scan">扫一扫</string>
+    
+<!--     上拉刷新listview控件 -->
+    <string name="pull_to_refresh_pull_label">下拉可以刷新</string>
+    <string name="pull_to_refresh_release_label">松开可以刷新</string>
+    <string name="pull_to_refresh_refreshing_label">加载中...</string>
+    <string name="pull_to_refresh_tap_label">下拉可以刷新</string>
+    <string name="pull_to_refresh_update">最近更新：</string>
+    <string  name="developing"  >此功能正在开发中，稍后为你呈现！！！</string>
+    
+    <!-- 另一个控件 -->
+
+      <!-- Just use standard Pull Down String when pulling up. These can be set for languages which require it -->
+    <string name="pull_to_refresh_from_bottom_pull_label">@string/pull_to_refresh_pull_label</string>
+    <string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string>
+   <!--  
+    <string name="pull_to_refresh_pull_label">下拉刷新…</string>
+  <string name="pull_to_refresh_release_label">放开以刷新…</string>
+  <string name="pull_to_refresh_refreshing_label">正在载入…</string>
+     -->
+    <string name="app_menu_surelogout">确定退出程序吗？</string>
+    <string name="sure">确定</string>
+    <string name="cancle">取消</string>
+        <string name="app_error">应用程序错误</string>
+    <string name="app_error_message">很抱歉，应用程序出现错误，即将退出。\n请提交错误报告，我们会尽快修复这个问题！</string>
+    <string name="submit_report">提交报告</string>
+    
+</resources>

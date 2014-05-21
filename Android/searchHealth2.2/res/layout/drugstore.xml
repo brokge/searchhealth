@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@+id/s_dialogTitle"
+            style="@style/actionBarImgButton"
+            android:src="@drawable/actionbar_btn_filter" 
+            android:visibility="gone"/>
+
+        <ImageView style="@style/actionBarSpliter" 
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginLeft="@dimen/actionbar_imgbtn_width_x1"
+            android:text="@string/drug_store" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <ImageButton
+            android:id="@id/actionbar_tomap_btn"
+            style="@style/actionBarImgButton"
+            android:src="@drawable/actionbar_btn_map" />
+    </LinearLayout>
+
+    <include layout="@layout/async_begin" 
+            android:visibility="gone"/>
+
+    <include layout="@layout/async_error" />
+
+    <!-- <ListView
+        android:id="@id/drugstorelist_listview"
+        style="@style/drugstoreList" >
+    </ListView> -->
+    
+    <coolbuy360.pulltorefresh.PullToRefreshListView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/drugstorelist_ptflistview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:layoutAnimation="@animator/layout_refresh_listview_animation"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:smoothScrollbar="true"
+        ptr:ptrAnimationStyle="flip" >
+    </coolbuy360.pulltorefresh.PullToRefreshListView>
+
+    <!-- <include
+        layout="@layout/mapbottom"
+        android:visibility="gone" >
+    </include> -->
+
+</LinearLayout>

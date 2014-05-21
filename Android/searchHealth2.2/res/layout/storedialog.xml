@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/drugstore_filter_range_bg_img"
+    android:orientation="vertical" 
+    android:padding="20dp">
+
+    <TextView
+		style="@style/drugstoreFilterGroupLaber"
+        android:text="范围" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >        
+
+        <RadioGroup
+            android:id="@+id/radiogroup_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/storedialog_rdio5"
+				style="@style/drugstoreFilterRadioButton"
+                android:checked="true"
+                android:text="5公里" />
+
+            <RadioButton
+                android:id="@+id/storedialog_rdio10"
+				style="@style/drugstoreFilterRadioButton"
+                android:text="10公里"/>
+
+            <RadioButton
+                android:id="@+id/storedialog_rdio20"
+				style="@style/drugstoreFilterRadioButton"
+                android:text="20公里" />
+
+            <RadioButton
+                android:id="@+id/storedialog_rdioMore"
+				style="@style/drugstoreFilterRadioButton"
+                android:text="全城" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+		style="@style/drugstoreFilterGroupLaber"
+        android:text="是否可以使用医保" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/radiogroup_bao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/storedialog_rdioYesOrNo"
+				style="@style/drugstoreFilterRadioButton"
+                android:checked="true"
+                android:text="不限" />
+
+            <RadioButton
+                android:id="@+id/storedialog_rdioNo"
+				style="@style/drugstoreFilterRadioButton"
+                android:text="不可以"/>
+
+            <RadioButton
+                android:id="@+id/storedialog_rdioYes"
+				style="@style/drugstoreFilterRadioButton"
+                android:text="可以" />
+        </RadioGroup>
+    </LinearLayout>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/dialog_ok"
+            style="@style/drugstoreFilterResultButton"
+            android:layout_marginRight="5dp"
+            android:text="确定" />
+
+        <Button
+            android:id="@+id/dialog_cancel"
+            style="@style/drugstoreFilterResultButton"
+            android:layout_marginLeft="5dp"
+            android:text="取消" />
+    </LinearLayout>
+
+</LinearLayout>

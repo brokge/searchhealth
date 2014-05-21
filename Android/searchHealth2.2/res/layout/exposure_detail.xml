@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/setting_bgcolor"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginRight="@dimen/actionbar_imgbtn_width_x1"
+            android:text="@string/exposure_title" />
+    </LinearLayout>
+
+    <include layout="@layout/async_begin" />
+
+    <include layout="@layout/async_error" />
+
+    <include layout="@layout/exposure_druglist_item" />
+    <!-- <LinearLayout  android:layout_width="fill_parent" android  ></LinearLayout> -->
+
+    <ImageView style="@style/searchBarSpliterDown" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:background="@null"
+        android:fadingEdge="vertical"
+        android:scrollbars="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@null"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                style="@style/commonItemRange"
+                android:background="@drawable/common_card_top_bg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="曝光日期：" />
+
+                <TextView
+                    android:id="@+id/exposure_drug_pubtime"
+                    style="@style/settingItemRightContentTextHighlight"
+                    android:gravity="left"
+                    android:text="2013.3.16" />
+            </LinearLayout>
+
+            <View style="@style/commonHorizontalSeparator" />
+
+            <LinearLayout
+                style="@style/commonItemRange"
+                android:background="@drawable/common_card_middle_bg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="抽检结果：" />
+
+                <TextView
+                    android:id="@+id/exposure_drug_result"
+                    style="@style/settingItemRightContentTextHighlight"
+                    android:gravity="left"
+                    android:text="假冒生产" />
+            </LinearLayout>
+
+            <View style="@style/commonHorizontalSeparator" />
+
+            <LinearLayout
+                android:id="@+id/exposure_drug_danger_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    style="@style/commonItemRange"
+                    android:background="@drawable/common_card_middle_bg"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/exposure_drug_danger_head"
+                        style="@style/settingItemHeadText"
+                        android:text="危        害：" />
+
+                    <TextView
+                        android:id="@+id/exposure_drug_danger"
+                        style="@style/settingItemRightContentTextHighlight"
+                        android:gravity="left"
+                        android:text="质量可疑，查为假药" />
+                </LinearLayout>
+
+                <View style="@style/commonHorizontalSeparator" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/exposure_drug_decri_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    style="@style/commonItemRange"
+                    android:background="@drawable/common_card_middle_bg"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/exposure_drug_decri"
+                        style="@style/settingItemHeadText"
+                        android:text="近期，天水市食品药品监督管理局在市场监督检查中发现，标示为贵州圣泉药业有限公司生产，批号分别为20110318和20120309的渴尔泰R降糖甲胶囊质量可疑，经与贵阳市食品药品监督管理局协查，  确认贵州圣泉药业有限公司未生产过批号为20110318和20120309 ，标示为“渴尔泰R降糖甲胶囊”的药品。" />
+                </LinearLayout>
+
+                <View style="@style/commonHorizontalSeparator" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/commonItemRange"
+                android:background="@drawable/common_card_middle_bg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="生产日期：" />
+
+                <TextView
+                    android:id="@+id/exposure_drug_producttime"
+                    style="@style/settingItemRightContentTextHighlight"
+                    android:gravity="left"
+                    android:text="2013.3.15" />
+            </LinearLayout>
+
+            <View style="@style/commonHorizontalSeparator" />
+
+            <LinearLayout
+                style="@style/commonItemRange"
+                android:background="@drawable/common_card_middle_bg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="批        号：" />
+
+                <TextView
+                    android:id="@+id/exposure_drug_productnum"
+                    style="@style/settingItemRightContentTextHighlight"
+                    android:gravity="left"
+                    android:text="201212120，32322321" />
+            </LinearLayout>
+
+            <View style="@style/commonHorizontalSeparator" />
+
+            <LinearLayout
+                android:id="@+id/exposure_drug_resource_layout"
+                style="@style/commonItemRange"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/common_card_bottom_bg"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="来        源：" />
+
+                <TextView
+                    android:id="@+id/exposure_drug_resource"
+                    style="@style/settingItemRightContentTextHighlight"
+                    android:gravity="left"
+                    android:lines="2"
+                    android:text="假药警示：渴尔泰降糖甲胶囊_药品曝光_药品价格315网" />
+
+                <ImageView
+                    android:id="@+id/exposure_listview_resource_h"
+                    style="@style/settingItemRightArrow" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

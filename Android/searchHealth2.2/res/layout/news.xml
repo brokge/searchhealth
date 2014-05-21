@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/actionBar" >
+
+        <!--
+             <ImageView
+            android:id="@+id/p_imgTitle"
+			style="@style/actionBarImgButton"
+            android:src="@drawable/actionbar_logo_img"
+            android:visibility="gone" />
+        -->
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:text="@string/news" />
+    </LinearLayout>
+
+    <coolbuy360.PageIndicator.TabPageIndicator
+        android:id="@+id/news_indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/news_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

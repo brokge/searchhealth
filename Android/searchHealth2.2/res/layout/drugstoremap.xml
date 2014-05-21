@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton"/>
+        
+        <ImageView style="@style/actionBarSpliter" />
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginRight="@dimen/actionbar_imgbtn_width_x1"
+            android:text="@string/drug_store"/>
+
+        <ImageView
+            style="@style/actionBarSpliter"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/s_map_btn_list"
+            style="@style/actionBarImgButton"
+            android:src="@drawable/actionbar_btn_specification"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <include layout="@layout/async_error" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true" />
+
+        <include layout="@layout/async_begin" />
+
+    </FrameLayout>
+    
+    <include layout="@layout/mapbottom"/>
+
+</LinearLayout>

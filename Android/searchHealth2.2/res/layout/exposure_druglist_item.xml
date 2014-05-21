@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/exposure_druglist_item_id"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drug_list_bg"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/exposure_listview_img"
+        style="@style/drugPhotoImageView" />
+
+    <LinearLayout style="@style/drugListItemInfoRange" >
+
+        <TextView
+            android:id="@+id/exposure_listview_name"
+            style="@style/drugListItemNameText"
+            android:text="@string/drug_product" />
+
+        <TextView
+            android:id="@+id/exposure_listview_descri"
+            style="@style/drugListItemEnterpriseText"
+            android:text="危险品描述" />
+
+        <LinearLayout style="@style/drugListItemPropertiesIconRange" >
+
+            <TextView
+                android:id="@+id/exposure_listview_com"
+                style="@style/drugListItemEnterpriseText"
+                android:layout_width="wrap_content"
+                android:text="危害等级：" />
+
+            <RatingBar
+                android:id="@+id/exposure_listview_ratingbar"
+                style="@style/foodRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:isIndicator="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/exposure_listview_h"
+        style="@style/drugListItemRightArrowIcon" />
+
+</LinearLayout>

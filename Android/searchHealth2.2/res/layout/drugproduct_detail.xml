@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginLeft="@dimen/actionbar_imgbtn_width_x1"
+            android:text="@string/drug_detail" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <ImageButton
+            android:id="@+id/p_detaillocal_btn_P"
+            style="@style/actionBarImgButton"
+            android:src="@drawable/actionbar_btn_map" />
+
+        <ImageButton
+            android:id="@+id/p_detailinstruction_btn_P"
+            style="@style/actionBarImgButton"
+            android:src="@drawable/actionbar_btn_specification" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/p_detail_relativelayouy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drug_list_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/p_detail_img"
+            style="@style/drugPhotoImageView"/>
+
+        <LinearLayout style="@style/drugListItemInfoRange" >
+
+            <TextView
+                android:id="@+id/p_detail_title"
+                style="@style/drugListItemNameText"
+                android:text="@string/drug_product" />
+
+            <TextView
+                android:id="@+id/p_detail_store"
+                style="@style/drugListItemEnterpriseText"
+                android:text="公司名称" />
+
+            <LinearLayout style="@style/drugListItemPropertiesIconRange" >
+
+                <ImageView
+                    android:id="@+id/p_detail_otc"
+                    style="@style/drugPropertyIcon" />
+
+                <ImageView
+                    android:id="@+id/p_detail_bao"
+                    style="@style/drugPropertyIcon" />
+
+                <ImageView
+                    android:id="@+id/p_detail_h"
+                    style="@style/drugPropertyIcon" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView style="@style/drugListItemRightArrowIcon" />
+    </LinearLayout>
+
+    <ImageView style="@style/searchBarSpliterDown" />
+
+    <include layout="@layout/async_begin" />
+
+    <include layout="@layout/async_error" />
+
+    <ListView
+        android:id="@id/drugstorelist_listview"
+        style="@style/drugstoreList" >
+    </ListView>
+
+</LinearLayout>

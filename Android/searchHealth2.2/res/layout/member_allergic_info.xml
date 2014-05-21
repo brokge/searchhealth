@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:focusable="true" 
+    android:focusableInTouchMode="true"  >
+    
+    <LinearLayout style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginLeft="@dimen/actionbar_x2textbtn_with_x1imgbtn_margin"
+            android:text="修改过敏记录" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <Button
+            android:id="@id/actionbar_save_btn"
+            style="@style/actionBarTextButton"
+            android:layout_width="@dimen/actionbar_textbtn_width_x2word"
+            android:text="@string/save" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/setting_bgcolor"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <LinearLayout
+                android:id="@+id/member_allergic_info_item_occurrencetime"
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_head"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="发生时间" />
+
+                <TextView
+                    android:id="@+id/member_allergic_info_txv_occurrencetime"
+                    style="@style/settingItemRightContentText"
+                    android:text="请选择过敏发生时间" />
+
+                <ImageView style="@style/settingItemRightArrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/member_allergic_info_item_allergen"
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_body"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="过  敏  源" />
+
+                <TextView
+                    android:id="@+id/member_allergic_info_txv_allergen"
+                    style="@style/settingItemRightContentText"
+                    android:text="请选择过敏源" />
+
+                <ImageView style="@style/settingItemRightArrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_body"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="过敏症状" />
+
+                <EditText
+                    android:id="@+id/member_allergic_info_edt_symptom"
+                    style="@style/settingItemRightContentEditText"
+                    android:gravity="left"
+                    android:hint="请输入过敏症状"
+                    android:minHeight="120dp"
+                    android:singleLine="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_tail"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:text="说        明" />
+
+                <EditText
+                    android:id="@+id/member_allergic_info_edt_remarks"
+                    style="@style/settingItemRightContentEditText"
+                    android:gravity="left"
+                    android:hint="请输入更多说明信息"
+                    android:minHeight="120dp"
+                    android:singleLine="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

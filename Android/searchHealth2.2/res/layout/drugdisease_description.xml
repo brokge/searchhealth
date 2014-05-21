@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton" />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginRight="@dimen/actionbar_imgbtn_width_x1"
+            android:text="@string/desease_detail" />
+    </LinearLayout>
+
+    <include layout="@layout/async_begin" />
+
+    <include layout="@layout/async_error" />
+
+    <ExpandableListView
+        android:id="@+id/dis_decription_explistview"
+        style="@style/myExpandableListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:childDivider="@drawable/drugtype_group_divider"
+        android:divider="@drawable/drugtype_group_divider"
+        android:dividerHeight="2dp"
+        android:drawSelectorOnTop="false"
+        android:visibility="visible" 
+        android:listSelector="@android:color/transparent">
+    </ExpandableListView>
+
+</LinearLayout>

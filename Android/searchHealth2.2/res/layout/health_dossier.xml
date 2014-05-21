@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton" />
+
+        <ImageView style="@style/actionBarSpliter" />
+        
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginRight="@dimen/actionbar_imgbtn_width_x1"
+            android:text="@string/program_healthtrack"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none"
+        android:background="@color/setting_bgcolor">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+            
+            <LinearLayout
+                android:id="@+id/health_dossier_item_footprint"
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_single"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="健康足迹" />
+
+                <ImageView style="@style/settingItemRightArrow" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/health_dossier_item_disease"
+                style="@style/settingItemRange"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/settingitem_head"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="疾病史" />
+
+                <ImageView style="@style/settingItemRightArrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/health_dossier_item_contagious"
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_body"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="传染病史" />
+
+                <ImageView style="@style/settingItemRightArrow" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/health_dossier_item_herediary"
+                style="@style/settingItemRange"
+                android:background="@drawable/settingitem_tail"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="遗传病史" />
+
+                <ImageView style="@style/settingItemRightArrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/health_dossier_item_allergic"
+                style="@style/settingItemRange"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/settingitem_single"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="过敏史" />
+
+                <ImageView style="@style/settingItemRightArrow" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/health_dossier_item_operation"
+                style="@style/settingItemRange"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/settingitem_single"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/settingItemHeadText"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="手术" />
+
+                <ImageView style="@style/settingItemRightArrow" />
+            </LinearLayout>
+            
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

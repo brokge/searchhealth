@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <animated-rotate
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:drawable="@drawable/progress_circular"
+  android:pivotX="50%"
+  android:pivotY="50%" 
+  android:fromDegrees="0"
+  android:toDegrees="360" 
+  /> 
+ -->
+ <animated-rotate
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:drawable="@drawable/newloading35"
+  android:pivotX="50%"
+  android:pivotY="50%"  
+   android:fromDegrees="60"
+  android:toDegrees="320"  
+  /> 

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton"/>
+        
+        <ImageView style="@style/actionBarSpliter" />
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginRight="@dimen/actionbar_imgbtn_width_x1"
+            android:text="@string/drug_store"
+            android:singleLine="true"/>
+
+        <ImageView
+            style="@style/actionBarSpliter"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/s_map_btn_list"
+            style="@style/actionBarImgButton"
+            android:src="@drawable/actionbar_btn_specification"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <include layout="@layout/async_error" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <coolbuy360.control.MyMapView
+                android:id="@+id/bmapView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:clickable="true" />
+
+            <LinearLayout
+                android:id="@+id/bdrugstoremap_route_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignWithParentIfMissing="false"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="false"
+                android:layout_marginBottom="10dip"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/pre"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginRight="2dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/pre_" />
+
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="2dip"
+                    android:layout_marginRight="2dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/next_" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <include layout="@layout/async_begin" />
+
+    </FrameLayout>
+    
+    <include layout="@layout/mapbottom"/>
+
+</LinearLayout>

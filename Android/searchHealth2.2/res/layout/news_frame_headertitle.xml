@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent" >
+
+    <ImageView
+        android:id="@+id/news_headerImage"
+        android:layout_width="fill_parent"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@+id/news_header_line_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/news_frame_headtitle_bg"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="5dp" >
+
+        <TextView
+            android:id="@+id/news_headerType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@color/red"
+            android:padding="2dp"
+            android:text="头条"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/news_headerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:singleLine="true"
+            android:text="国内油价上涨趋势与来月利好"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</FrameLayout>

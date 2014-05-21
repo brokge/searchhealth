@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <FrameLayout style="@style/actionBar" >
+
+        <LinearLayout style="@style/actionBar" >
+
+            <TextView
+                android:id="@id/actionbar_page_title"
+                style="@style/actionBarPageTitle"
+                android:text="@string/drug_disers" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/drugdisease_btn_drug"
+            style="@style/actionBarTextButton"
+        	android:layout_gravity="left|center_vertical"
+            android:layout_width="70dp"
+            android:text="查药品"
+            android:visibility="gone"
+            
+            />
+
+        <Button
+            android:id="@+id/drugdisease_btntitle_refresh"
+            style="@style/actionBarTextButton"
+        	android:layout_gravity="right|center_vertical"
+            android:layout_width="@dimen/actionbar_textbtn_width_x2word"
+            android:text="刷新"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/disease_main_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout style="@style/searchBar" >
+
+            <EditText
+                android:id="@id/searchbar_inputtext"
+                style="@style/searchBarInputText"
+                android:hint="@string/diseaseSearch_hintText"
+                android:text="高血压" >
+
+                <!-- <requestFocus></requestFocus> -->
+            </EditText>
+
+            <ImageButton
+                android:id="@id/searchbar_searchbtn"
+                style="@style/searchBarSearchButton"                 
+           
+                />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal" >
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/disease_main_bg_doc_img" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="100"
+                            android:orientation="horizontal" >
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="75" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="50"
+                                android:orientation="vertical" >
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="50" />
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="50" >
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/disease_common_key6_bg_img" />
+
+                                    <coolbuy360.control.AutoFitTextView
+                                        android:id="@+id/disease_common_key6"
+                                        style="@style/commonDiseaseLabTextView"
+                                        android:text="常见病症6"
+                                        android:textColor="#3B8E00"/>
+                                </FrameLayout>
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="48" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="74"
+                                android:orientation="vertical" >
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="70" >
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/disease_common_key1_bg_img" />
+
+                                    <coolbuy360.control.AutoFitTextView
+                                        android:id="@+id/disease_common_key1"
+                                        style="@style/commonDiseaseLabTextView"
+                                        android:text="常见病症1"
+                                        android:textColor="#B05040"/>
+                                </FrameLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="30" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="240" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="140"
+                            android:orientation="horizontal" >
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="40" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="90"
+                                android:orientation="vertical" >
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="40" />
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="100" >
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/disease_common_key4_bg_img" />
+
+                                    <coolbuy360.control.AutoFitTextView
+                                        android:id="@+id/disease_common_key4"
+                                        style="@style/commonDiseaseLabTextView"
+                                        android:text="常见病症4"
+                                        android:textColor="#A17D0F"/>
+                                </FrameLayout>
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="20" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="190"
+                                android:orientation="vertical" >
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="80" >
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/disease_common_key3_bg_img" />
+
+                                    <coolbuy360.control.AutoFitTextView
+                                        android:id="@+id/disease_common_key3"
+                                        style="@style/commonDiseaseLabTextView"
+                                        android:text="常见病症3"
+                                        android:textColor="#4A880B" />
+                                </FrameLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="60" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="30" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="80"
+                                android:orientation="vertical" >
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="40" />
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="80" >
+
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/disease_common_key2_bg_img" />
+
+                                    <coolbuy360.control.AutoFitTextView
+                                        android:id="@+id/disease_common_key2"
+                                        style="@style/commonDiseaseLabTextView"
+                                        android:text="常见病症2"
+                                        android:textColor="#B65042"/>
+                                </FrameLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="20" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="40" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal" >
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="310" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="95"
+                            android:orientation="vertical" >
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="20" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="95" >
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/disease_common_key5_bg_img" />
+
+                                <coolbuy360.control.AutoFitTextView
+                                    android:id="@+id/disease_common_key5"
+                                    style="@style/commonDiseaseLabTextView"
+                                    android:text="常见病症5"
+                                    android:textColor="#99980C"/>
+                            </FrameLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="120" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="82" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="7" />
+            </LinearLayout>
+
+            <include layout="@layout/async_begin" />
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

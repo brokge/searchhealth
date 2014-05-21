@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    android:focusableInTouchMode="false" >
+
+    <LinearLayout
+        style="@style/drugstoreDetailInfoRange"
+        android:background="@color/headinfo_bg" >
+
+        <TextView
+            android:id="@+id/dis_decription_name"
+			style="@style/diseaseDetailNameText" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" >
+
+            <TableRow android:layout_width="match_parent"
+            android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="别名："
+                    android:textColor="@color/content_subcontent_textcolor"
+                    android:textSize="@dimen/diseaseinfo_subtext_textsize" />
+
+                <TextView
+                    android:id="@+id/dis_decription_othername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/content_subcontent_textcolor"
+                    android:textSize="@dimen/diseaseinfo_subtext_textsize"
+                    android:text="别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名别名" />
+            </TableRow>
+
+            <TableRow android:layout_width="fill_parent"
+            android:layout_marginTop="5dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="部位："
+                    android:textColor="@color/content_subcontent_textcolor"
+                    android:textSize="@dimen/diseaseinfo_subtext_textsize" />
+
+                <TextView
+                    android:id="@+id/dis_decription_part"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/content_subcontent_textcolor"
+                    android:textSize="@dimen/diseaseinfo_subtext_textsize" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <ImageView style="@style/searchBarSpliterDown" />
+
+    <TextView
+        android:id="@+id/dis_decription_introduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textColor="@color/content_subcontent_textcolor"
+        android:textSize="16sp"
+        android:background="@null" />
+
+</LinearLayout>

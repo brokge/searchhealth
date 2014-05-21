@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout 
+        android:id="@+id/setting_title_bar"
+        style="@style/actionBar" >
+
+        <ImageButton
+            android:id="@id/actionbar_pre_btn"
+            style="@style/actionBarPreButton"  />
+
+        <ImageView style="@style/actionBarSpliter" />
+
+        <TextView
+            android:id="@id/actionbar_page_title"
+            style="@style/actionBarPageTitle"
+            android:layout_marginRight="@dimen/actionbar_imgbtn_width_x1"
+            android:text="@string/setting"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_below="@id/setting_title_bar"
+        android:layout_marginTop="@dimen/actionbar_height" 
+        android:background="@color/setting_bgcolor">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+				style="@style/settingGroupTitle"
+                android:text="浏览设置" />
+
+            <RelativeLayout
+                android:id="@+id/setting_item_autoOptimize"
+				style="@style/settingItemRange"
+                android:background="@drawable/settingitem_head" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical" >
+
+                        <TextView
+							style="@style/settingItemText"
+                            android:text="图片质量自动优化"/>
+
+                        <TextView
+							style="@style/settingItemSubText"
+                            android:text="wlan网络加载大图，普通网络加载小图" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/setting_check_autoOptimize"
+						style="@style/settingItemCheckBox"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setting_item_imgQuality"
+				style="@style/settingItemRange"
+                android:background="@drawable/settingitem_tail" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+							style="@style/settingItemText"
+                            android:text="图片质量" />
+
+                        <TextView
+                            android:id="@+id/setting_desc_imgQuality"
+							style="@style/settingItemSubText"
+                            android:text="所有网络加载大图" />
+                    </LinearLayout>
+
+                    <ImageView style="@style/settingItemRightArrow" />
+                </LinearLayout>
+            </RelativeLayout>         
+           
+            <TextView
+				style="@style/settingGroupTitle"
+                android:text="性能设置" />
+
+            <RelativeLayout
+                android:id="@+id/setting_item_clearCache"
+				style="@style/settingItemRange"
+                android:background="@drawable/settingitem_single" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+							style="@style/settingItemText"
+                            android:text="清除缓存" />
+
+                        <TextView
+							style="@style/settingItemSubText"
+                            android:text="清除应用程序中的缓存" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/setting_size_cache"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginLeft="5.0dip"
+                        android:layout_marginRight="@dimen/setting_item_rightico_marginright"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:paddingBottom="2.0dip"
+                        android:paddingLeft="10.0dip"
+                        android:paddingRight="2.0dip"
+                        android:paddingTop="5.0dip"
+                        android:text="20.3MB"
+                        android:textColor="@color/setting_item_textcolor"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </RelativeLayout>
+      <!--      <RelativeLayout
+                android:id="@+id/setting_item_pushSetting"
+				style="@style/settingItemRange"
+                android:background="@drawable/settingitem_tail" >
+
+                <TextView
+					style="@style/settingItemText_SingleLine"
+                    android:text="推送设置" />
+
+                <ImageView style="@style/settingItemRightArrow"/>
+             </RelativeLayout>
+             -->
+            <TextView
+				style="@style/settingGroupTitle"
+                android:text="版本信息" />
+
+            <RelativeLayout
+                android:id="@+id/setting_item_checkUpdate"
+				style="@style/settingItemRange"
+                android:background="@drawable/settingitem_head" >
+
+                <TextView
+					style="@style/settingItemText_SingleLine"
+                    android:text="检查更新" />
+
+                <ImageView style="@style/settingItemRightArrow"/>
+            </RelativeLayout>
+
+            
+            <RelativeLayout
+                android:id="@+id/setting_item_legalNotice"
+				style="@style/settingItemRange"
+                android:background="@drawable/settingitem_body" >
+
+                <TextView
+					style="@style/settingItemText_SingleLine"
+                    android:text="法律声明"/>
+
+                <ImageView style="@style/settingItemRightArrow"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/setting_item_aboutUs"
+				style="@style/settingItemRange"
+                android:layout_marginBottom="15.0dip"
+                android:background="@drawable/settingitem_tail" >
+
+                <TextView
+					style="@style/settingItemText_SingleLine"
+                    android:text="关于" />
+
+                <ImageView style="@style/settingItemRightArrow"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

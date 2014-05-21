@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/title_plain" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="0dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/customer_scrollview_bg"
+                android:layout_width="match_parent"
+                android:layout_height="300dip"
+                android:layout_marginTop="-30dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/score_header_bg" >
+            </ImageView>
+
+            <View
+                android:id="@+id/line_up"
+                android:layout_width="2dip"
+                android:layout_height="400dip"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="60dip"
+                android:layout_marginTop="-290dip"
+                android:background="@color/transparent_whrite" />
+            <!--
+        <Button
+                        android:id="@+id/member_health_score_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="200dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="50dp"
+                        android:background="@color/transparent"
+                        android:padding="10dp"
+                        android:text="点击按钮" />
+            -->
+            <!-- android:onClick="testOnClick" -->
+
+            <coolbuy360.control.CustomerScrollView
+                android:id="@+id/customerScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00000000"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200dip"
+                        android:background="#00000000"
+                        android:orientation="vertical" >
+
+                        <!--
+                             <ImageView
+                            android:id="@+id/image_header"
+                            android:layout_width="60dip"
+                            android:layout_height="60dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="30dip"
+                            android:layout_marginTop="100dip"
+                            android:src="@drawable/member_health_score_hole" />
+                            
+                        -->
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="30dip"
+                            android:layout_marginTop="100dip" >
+
+                            <Button
+                                android:id="@+id/member_score_btn_check"
+                                android:layout_width="60dip"
+                                android:layout_height="60dip"
+                                android:background="@drawable/score_uncheck"
+                                android:clickable="false" />
+
+                            <ProgressBar
+                                android:id="@+id/member_score_check_loading_progressbar"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_gravity="center"
+                                android:indeterminateBehavior="repeat"
+                                android:indeterminateDrawable="@drawable/member_score_checkloading"
+                                android:indeterminateDuration="1000"
+                                android:indeterminateOnly="true"
+                                android:max="1000"
+                                android:progress="5" />
+                            
+                            <!--
+				   style="@android:style/Widget.ProgressBar"	
+				       <item name="android:indeterminateOnly">true</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_medium_white</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+        <item name="android:indeterminateDuration">3500</item>
+        <item name="android:minWidth">48dip</item>
+        <item name="android:maxWidth">48dip</item>
+        <item name="android:minHeight">48dip</item>
+        <item name="android:maxHeight">48dip</item>
+        <item name="android:mirrorForRtl">false</item>
+                            -->
+
+                            <!--
+                              <ImageView 
+                             android:id="@+id/member_score_check_loading"
+                             android:layout_width="60dip" android:layout_height="60dip" android:src="@drawable/score_checkLoading"  />
+                            -->
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/member_score_txt_checkstate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="20dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="165dip"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="4dp"
+                            android:paddingRight="4dp"
+                            android:shadowColor="@color/gray"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="3"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="14sp" >
+                        </TextView>
+                        <!-- android:background="@color/transparent_whrite" -->
+                        <!-- android:text="已连续签到3天 明日+15" -->
+
+                        <ImageView
+                            android:id="@+id/iv_line_down"
+                            android:layout_width="20dip"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="40dp"
+                            android:layout_marginTop="155dip"
+                            android:background="@drawable/member_health_score_line"
+                            android:visibility="gone" />
+
+                        <!--
+                             <View
+                            android:layout_width="wrap_content"
+                            android:layout_height="1dip"
+                            android:layout_below="@+id/iv_line_down"
+                            android:layout_marginTop="-3dip"
+                            android:background="@color/white" />
+                        -->
+
+
+                        <!--
+                             <ImageView
+                            android:id="@+id/member_health_score_image"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignBottom="@+id/image_header"
+                            android:layout_marginLeft="240dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@color/transparent"
+                            android:padding="0dp"
+                            android:src="@drawable/member_health_score_hole" />
+
+                        <ImageView
+                            android:id="@+id/member_health_score_imagebtn"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginTop="70dp"
+                            android:background="@color/transparent"
+                            android:padding="0dp"
+                            android:src="@drawable/member_health_score_hole_artist" />
+                            
+                        -->
+                    </RelativeLayout>
+
+                    <!--
+                <TableLayout
+                    android:id="@+id/tl_main"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white" >
+                </TableLayout>
+                    -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical" >
+
+                        <!--
+                    <coolbuy360.control.CustomerHorizontalScrollview  
+                        android:layout_width="fill_parent" 
+                        android:layout_height="wrap_content"                          
+                        android:scrollbars="none" >
+                     <LinearLayout   android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" >                
+                         <ImageView  android:layout_width="150dp" android:layout_height="80dp" android:src="@drawable/new_img3" android:scaleType="fitXY" android:layout_marginLeft="5dp"/>
+                         <ImageView  android:layout_width="150dp" android:layout_height="80dp" android:src="@drawable/new_img3" android:layout_marginLeft="5dp"/>
+                         <ImageView  android:layout_width="150dp" android:layout_height="80dp" android:src="@drawable/new_img3" android:layout_marginLeft="5dp"/>
+                         <ImageView  android:layout_width="150dp" android:layout_height="80dp" android:src="@drawable/new_img3" android:layout_marginLeft="5dp"/>
+                         <ImageView  android:layout_width="150dp" android:layout_height="80dp" android:src="@drawable/new_img3" android:layout_marginLeft="5dp"/>   
+                     </LinearLayout>
+                    </coolbuy360.control.CustomerHorizontalScrollview >
+                    
+                        -->
+
+                        <Button
+                            android:id="@+id/member_score_btn_More"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_margin="0dp"
+                            android:background="@drawable/member_score_more_btnpress"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingTop="12dp"
+                            android:paddingBottom="12dp"
+                            android:text="赚更多健康值"
+                            android:textSize="18sp" />
+
+                        <!--
+                             <TextView
+                            android:id="@+id/member_score_text_More"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="8dp"
+                            android:gravity="center_vertical"
+                            android:text="赚更多健康值"
+                            android:textSize="18sp" />
+                        -->
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray_yellow"
+                        android:paddingBottom="12dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:paddingTop="12dp" 
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"  
+                            android:layout_gravity="bottom"                                 
+                            android:gravity="center_vertical"
+                            android:text="健康值兑换"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" 
+                            android:layout_gravity="bottom"                      
+                            android:gravity="center_vertical"
+                            android:layout_marginLeft="15dp"
+                            android:text="敬请期待。。。"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:padding="8dp" >
+
+                        <FrameLayout
+                            android:id="@+id/member_exchange_money_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                           android:background="@drawable/score_framelayout_press_left"
+                            android:gravity="center" >
+<!--  android:background="@drawable/score_framelayout_press_left" -->
+                            <ImageView
+                                android:id="@+id/member_score_bottom_leftbtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitCenter"
+                                android:padding="0dp"
+                                android:src="@drawable/using_score_l0" />
+
+                            <!-- <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|center_horizontal"
+                                android:gravity="right"
+                                android:maxLines="2"
+                                android:padding="2dip"
+                                android:text="健康值当钱用，每500积分抵5块" /> -->
+                        </FrameLayout>
+                        <!-- #FCFEEB -->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="8dp"
+                            android:orientation="vertical" >
+                            
+                            <coolbuy360.control.Score_FrameLayout
+                                android:id="@+id/member_exchange_gif_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/score_framelayout_press_exchange"
+                                android:gravity="center"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="0dp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/using_score_r0" />
+
+                                <!-- <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center_horizontal"
+                                    android:maxLines="2"
+                                    android:padding="2dip"
+                                    android:text="兑换礼品" /> -->
+                            </coolbuy360.control.Score_FrameLayout>
+
+                            <FrameLayout
+                                android:id="@+id/member_exchange_activity_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:layout_marginTop="8dip"
+                                android:background="@drawable/member_score_more_btnpress"
+                                android:gravity="center"
+                                android:orientation="vertical" >
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="0dp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/using_score_r1" />
+
+                                <!-- <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center_horizontal"
+                                    android:maxLines="2"
+                                    android:padding="2dip"
+                                    android:text="免费参加健康体检活动" /> -->
+                            </FrameLayout>
+                        </LinearLayout>
+                        <!-- #F9FEF2 -->
+                    </LinearLayout>
+                </LinearLayout>
+            </coolbuy360.control.CustomerScrollView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent_whrite"
+            android:orientation="horizontal" 
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/member_score_text_Lable"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="我的健康值："
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/member_score_img_smallgreen"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:scaleType="center"
+                android:src="@drawable/score_smallgreen" />
+            
+            <TextView
+                android:id="@+id/member_score_text_val"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:shadowColor="@color/gray"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="3"
+                android:text="0"
+                android:textColor="@color/deepgreen"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/member_score_text_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="center_vertical"
+                android:textColor="@color/news_item_content"
+                android:text="明细"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

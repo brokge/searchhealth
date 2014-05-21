@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+   <SurfaceView
+        android:id="@+id/preview_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center" 
+ 
+       
+        />
+
+    <coolbuy360.zxing.ViewfinderView
+        android:id="@+id/viewfinder_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" 
+        
+         /> 
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="40dp"
+            android:text="请扫描药品包装上的条形码"
+            android:textColor="#d78816"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_light_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="400dp"
+            android:background="@drawable/torch_off" />
+
+        <ImageView
+            android:id="@+id/btn_cancel_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="500dp"
+            android:src="@drawable/btn_camera_cancel_scan"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" 
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/camera_diy_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="#CC000000"
+            android:paddingBottom="10dp"
+            android:paddingLeft="26dp"
+            android:paddingRight="26dp"
+            android:paddingTop="10dp"
+            android:text="取 消"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/camera_diy_input_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#CC000000"
+            android:padding="10dp"
+            android:text="手动输入"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_camera_diy_circle"
+        android:layout_width="480dp"
+        android:layout_height="480dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/bar_code_center"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_camera_diy"
+        android:layout_width="470dp"
+        android:layout_height="470dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/bar_code_round_grey"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/pg_camera_diy"
+        style="@style/CustomProgressStyle"
+        android:layout_width="470dp"
+        android:layout_height="450dp"
+        android:layout_marginTop="90dp"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/progressbar"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/iv_camera_diy_corner"
+        android:layout_width="481dp"
+        android:layout_height="479dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/bar_code_four_corner"
+        android:visibility="gone" />
+
+</FrameLayout>
